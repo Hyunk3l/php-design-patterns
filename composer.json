@@ -1,0 +1,18 @@
+{
+    "name": "hyunkel/php-design-patterns",
+    "description": "Just another design patterns collection for PHP",
+    "authors": [
+        {
+            "name": "Fabrizio Di Napoli",
+            "email": "fabri.dinapoli@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "4.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpDesignPatterns\\": ""
+        }
+    }
+}
