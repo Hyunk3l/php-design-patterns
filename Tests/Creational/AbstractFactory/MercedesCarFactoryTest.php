@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpDesignPatterns\Creational\AbstractFactory\Tests;
+namespace PhpDesignPatterns\Tests\Creational\AbstractFactory;
 
 use PhpDesignPatterns\Creational\AbstractFactory\MercedesCarFactory;
 use PhpDesignPatterns\Creational\AbstractFactory\AbstractCarFactory;
