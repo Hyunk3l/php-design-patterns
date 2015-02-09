@@ -60,4 +60,16 @@ class ClassicWatchBuilderTest extends \PHPUnit_Framework_TestCase
         $expected = array("watch box" => $this->getMock("PhpDesignPatterns\\Creational\\Builder\\Components\\Box"));
         $this->assertInstanceOf('PhpDesignPatterns\Creational\Builder\Watch', $this->builder->getWatch());
     }
+
+    /**
+     * Testing addHands method.
+     */
+    public function testAddHands()
+    {
+        $this->builder->createWatch();
+        $this->builder->addHands();
+
+        $expected = array("Minutes Hand" => $this->getMock("PhpDesignPatterns\\Creational\\Builder\\Components\\Hand"));
+        $this->assertInstanceOf('PhpDesignPatterns\Creational\Builder\Watch', $this->builder->getWatch());
+    }
 }

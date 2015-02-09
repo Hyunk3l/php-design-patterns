@@ -7,4 +7,4 @@
 Running Unit Tests
 
 * Run `composer install`
-* Now launch UTs running `vendor/bin/phpunit Creational/`
+* Now launch UTs running `vendor/bin/phpunit Tests/`
