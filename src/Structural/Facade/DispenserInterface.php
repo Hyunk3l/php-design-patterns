@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpDesignPatterns\Structural\Facade;
+namespace Hyunk3l\PhpDesignPatterns\Structural\Facade;
 
 /**
  * Interface DispenserInterface
- * @package PhpDesignPatterns\Structural\Facade
+ * @package Hyunk3l\PhpDesignPatterns\Structural\Facade
  */
 interface DispenserInterface
 {

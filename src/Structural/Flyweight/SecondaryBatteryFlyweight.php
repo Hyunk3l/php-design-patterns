@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpDesignPatterns\Structural\Flyweight;
+namespace Hyunk3l\PhpDesignPatterns\Structural\Flyweight;
 
 /**
  * Class SecondaryBatteryFlyweight
- * @package PhpDesignPatterns\Structural\Flyweight
+ * @package Hyunk3l\PhpDesignPatterns\Structural\Flyweight
  */
 class SecondaryBatteryFlyweight implements AccessoryFlyweightInterface
 {

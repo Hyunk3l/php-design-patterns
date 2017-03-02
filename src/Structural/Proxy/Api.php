@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpDesignPatterns\Structural\Proxy;
+namespace Hyunk3l\PhpDesignPatterns\Structural\Proxy;
 
 /**
  * Class Api
- * @package PhpDesignPatterns\Structural\Proxy
+ * @package Hyunk3l\PhpDesignPatterns\Structural\Proxy
  */
 class Api
 {

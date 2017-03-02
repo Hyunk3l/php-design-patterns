@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpDesignPatterns\Creational\Builder\Components;
+namespace Hyunk3l\PhpDesignPatterns\Creational\Builder\Components;
 
 /**
  * Interface ComponentInterface
- * @package PhpDesignPatterns\Creational\Builder\Components
+ * @package Hyunk3l\PhpDesignPatterns\Creational\Builder\Components
  */
 interface ComponentInterface
 {

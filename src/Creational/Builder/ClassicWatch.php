@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpDesignPatterns\Creational\Builder;
+namespace Hyunk3l\PhpDesignPatterns\Creational\Builder;
 
 class ClassicWatch extends Watch
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpDesignPatterns\Creational\AbstractFactory\Volkswagen;
+namespace Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Volkswagen;
 
 use PhpDesignPatterns\Creational\AbstractFactory\BaseCar;
 

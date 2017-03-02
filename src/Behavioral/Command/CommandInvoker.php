@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpDesignPatterns\Behavioral\Command;
+namespace Hyunk3l\PhpDesignPatterns\Behavioral\Command;
 
 /**
  * Class CommandInvoker
- * @package PhpDesignPatterns\Behavioral\Command
+ * @package Hyunk3l\PhpDesignPatterns\Behavioral\Command
  */
 class CommandInvoker
 {

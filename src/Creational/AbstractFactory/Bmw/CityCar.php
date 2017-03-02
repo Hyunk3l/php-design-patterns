@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpDesignPatterns\Creational\AbstractFactory\Bmw;
+namespace Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Bmw;
 
 require_once __DIR__ . '/../BaseCar.php';
 

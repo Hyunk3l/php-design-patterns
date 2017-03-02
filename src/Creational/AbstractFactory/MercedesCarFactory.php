@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpDesignPatterns\Creational\AbstractFactory;
+namespace Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory;
 
 require_once __DIR__ . '/AbstractCarFactory.php';
 

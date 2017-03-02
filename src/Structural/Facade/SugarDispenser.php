@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpDesignPatterns\Structural\Facade;
+namespace Hyunk3l\PhpDesignPatterns\Structural\Facade;
 
 /**
  * Class SugarDispenser
- * @package PhpDesignPatterns\Structural\Facade
+ * @package Hyunk3l\PhpDesignPatterns\Structural\Facade
  */
 Class SugarDispenser implements DispenserInterface
 {

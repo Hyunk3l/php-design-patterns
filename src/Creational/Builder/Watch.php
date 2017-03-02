@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpDesignPatterns\Creational\Builder;
+namespace Hyunk3l\PhpDesignPatterns\Creational\Builder;
 
 use PhpDesignPatterns\Creational\Builder\Components\ComponentInterface;
 
 /**
  * Class Watch
- * @package PhpDesignPatterns\Creational\Builder
+ * @package Hyunk3l\PhpDesignPatterns\Creational\Builder
  */
 abstract class Watch
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpDesignPatterns\Structural\Decorator;
+namespace Hyunk3l\PhpDesignPatterns\Structural\Decorator;
 
 /**
  * Class JsonResponse
- * @package PhpDesignPatterns\Structural\Decorator
+ * @package Hyunk3l\PhpDesignPatterns\Structural\Decorator
  */
 class JsonResponse extends Decorator
 {

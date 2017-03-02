@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpDesignPatterns\Structural\Decorator;
+namespace Hyunk3l\PhpDesignPatterns\Structural\Decorator;
 
 /**
  * Abstract class Decorator
  *
  * Provides basic methods for Concrete Decorators.
  *
- * @package PhpDesignPatterns\Structural\Decorator
+ * @package Hyunk3l\PhpDesignPatterns\Structural\Decorator
  */
 abstract class Decorator implements ResponseInterface
 {

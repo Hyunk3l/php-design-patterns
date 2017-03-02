@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpDesignPatterns\Creational\Builder;
+namespace Hyunk3l\PhpDesignPatterns\Creational\Builder;
 
 /**
  * Class SportWatchBuilder
- * @package PhpDesignPatterns\Creational\Builder
+ * @package Hyunk3l\PhpDesignPatterns\Creational\Builder
  */
 class SportWatchBuilder implements WatchBuilderInterface
 {

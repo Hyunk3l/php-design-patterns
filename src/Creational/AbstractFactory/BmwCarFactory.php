@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpDesignPatterns\Creational\AbstractFactory;
+namespace Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory;
 
 /**
  * Class BmwCarFactory

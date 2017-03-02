@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpDesignPatterns\Creational\Builder;
+namespace Hyunk3l\PhpDesignPatterns\Creational\Builder;
 
 /**
  * Interface WatchBuilderInterface
- * @package PhpDesignPatterns\Creational\Builder
+ * @package Hyunk3l\PhpDesignPatterns\Creational\Builder
  */
 interface WatchBuilderInterface
 {

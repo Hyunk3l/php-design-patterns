@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpDesignPatterns\Structural\Composite;
+namespace Hyunk3l\PhpDesignPatterns\Structural\Composite;
 
 /**
  * Class PhoneElement
- * @package PhpDesignPatterns\Structural\Composite
+ * @package Hyunk3l\PhpDesignPatterns\Structural\Composite
  */
 abstract class PhoneElement
 {
