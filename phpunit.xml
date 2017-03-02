@@ -2,7 +2,7 @@
 <phpunit bootstrap="./vendor/autoload.php" colors="true">
     <testsuites>
         <testsuite name="php-design-patterns">
-            <directory suffix="Test.php">Tests/*</directory>
+            <directory suffix="Test.php">test/*</directory>
         </testsuite>
     </testsuites>
     <filter>
@@ -10,8 +10,7 @@
             <directory>./vendor</directory>
         </blacklist>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">test/</directory>
-            <file>/path/to/file</file>
+            <directory suffix=".php">src/</directory>
         </whitelist>
     </filter>
     <logging>
