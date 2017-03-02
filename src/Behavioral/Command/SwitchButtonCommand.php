@@ -2,36 +2,19 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Behavioral\Command;
 
-/**
- * Class SwitchButtonCommand
- * @package Hyunk3l\PhpDesignPatterns\Behavioral\Command
- */
 class SwitchButtonCommand implements CommandInterface
 {
-    /**
-     * Instance of ReceiverInterface.
-     *
-     * @var ReceiverInterface
-     */
+    const COMMAND_MESSAGE = "Tv has been switched on.";
+
     private $control;
 
-    /**
-     * Class constructor.
-     *
-     * @param ReceiverInterface $control
-     */
     public function __construct(ReceiverInterface $control)
     {
         $this->control = $control;
     }
 
-    /**
-     * Execute the switch tv command.
-     *
-     * @return string
-     */
-    public function execute()
+    public function execute(): string
     {
-        return $this->control->executeCommand("Tv has been switched on.");
+        return $this->control->executeCommand(self::COMMAND_MESSAGE);
     }
 }

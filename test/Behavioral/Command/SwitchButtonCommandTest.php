@@ -6,17 +6,12 @@ use Hyunk3l\PhpDesignPatterns\Behavioral\Command\ReceiverInterface;
 use Hyunk3l\PhpDesignPatterns\Behavioral\Command\SwitchButtonCommand;
 use PHPUnit\Framework\TestCase;
 
-
-/**
- * Class SwitchButtonCommandTest
- * @package PhpDesignPatterns\Tests\Behavioral\Command
- */
 class SwitchButtonCommandTest extends TestCase
 {
     /**
-     * Testing execute.
+     * @test
      */
-    public function testExecuteCommand()
+    public function shouldExecuteSwitchButtonCommand()
     {
         $receiver = $this->getMockBuilder(ReceiverInterface::class)
             ->setMethods(["executeCommand"])
@@ -25,10 +20,12 @@ class SwitchButtonCommandTest extends TestCase
         $receiver
             ->expects($this->once())
             ->method("executeCommand")
-            ->with("Tv has been switched on.")
-            ->will($this->returnValue("Tv has been switched on."))
-        ;
-        $command = new SwitchButtonCommand($receiver);
-        $this->assertEquals("Tv has been switched on.", $command->execute());
+            ->with(SwitchButtonCommand::COMMAND_MESSAGE)
+            ->willReturn(SwitchButtonCommand::COMMAND_MESSAGE);
+
+        $this->assertEquals(
+            SwitchButtonCommand::COMMAND_MESSAGE,
+            (new SwitchButtonCommand($receiver))->execute()
+        );
     }
 }
