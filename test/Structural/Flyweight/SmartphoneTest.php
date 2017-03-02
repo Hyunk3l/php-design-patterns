@@ -2,6 +2,7 @@
 
 namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Flyweight;
 
+use Hyunk3l\PhpDesignPatterns\Structural\Flyweight\AccessoryFlyweightInterface;
 use Hyunk3l\PhpDesignPatterns\Structural\Flyweight\Smartphone;
 use PHPUnit\Framework\TestCase;
 
@@ -51,7 +52,7 @@ class SmartphoneTest extends TestCase
      */
     public function testGetAccessoriesPrice()
     {
-        $mock_accessory = $this->getMock('\\PhpDesignPatterns\\Structural\\Flyweight\\AccessoryFlyweightInterface', array('getPrice'));
+        $mock_accessory = $this->getMockBuilder(AccessoryFlyweightInterface::class)->setMethods(array('getPrice'))->getMock();
         $mock_accessory
             ->expects($this->exactly(2))
             ->method('getPrice')
@@ -67,7 +68,7 @@ class SmartphoneTest extends TestCase
      */
     public function testGetTotalPrice()
     {
-        $mock_accessory = $this->getMock('\\PhpDesignPatterns\\Structural\\Flyweight\\AccessoryFlyweightInterface', array('getPrice'));
+        $mock_accessory = $this->getMockBuilder(AccessoryFlyweightInterface::class)->setMethods(array('getPrice'))->getMock();
         $mock_accessory
             ->expects($this->exactly(2))
             ->method('getPrice')

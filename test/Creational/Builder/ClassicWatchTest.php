@@ -3,6 +3,7 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Creational\Builder;
 
 use Hyunk3l\PhpDesignPatterns\Creational\Builder\ClassicWatch;
+use Hyunk3l\PhpDesignPatterns\Creational\Builder\Components\ComponentInterface;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -17,10 +18,12 @@ class ClassicWatchTest extends TestCase
     public function testWatchComponent()
     {
         $watch = new ClassicWatch;
-        $mock_component = $this->getMock("PhpDesignPatterns\\Creational\\Builder\\Components\\ComponentInterface");
-        $watch->addComponent("Test component", $mock_component);
+        $mockedComponent = $this->getMockBuilder(ComponentInterface::class)
+            ->disableOriginalConstructor()
+            ->getMock();
+        $watch->addComponent("Test component", $mockedComponent);
 
-        $expected = array("Test component" => $mock_component);
+        $expected = array("Test component" => $mockedComponent);
         $this->assertEquals($expected, $watch->getWatchComponents(), "the result is not the expected one.");
     }
 }

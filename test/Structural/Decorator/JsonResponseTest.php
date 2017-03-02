@@ -3,6 +3,7 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Decorator;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Decorator\JsonResponse;
+use Hyunk3l\PhpDesignPatterns\Structural\Decorator\ResponseInterface;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -24,7 +25,9 @@ class JsonResponseTest extends TestCase
     public function testRender()
     {
         $fake_render = array('message' => 'api response to json');
-        $api_mock = $this->getMock('PhpDesignPatterns\\Structural\\Decorator\\ResponseInterface', array('render'));
+        $api_mock = $this->getMockBuilder(ResponseInterface::class)
+            ->setMethods(array('render'))
+            ->getMock();
         $api_mock
             ->expects($this->once())
             ->method('render')

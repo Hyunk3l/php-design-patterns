@@ -3,6 +3,9 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Creational\Builder;
 
 use Hyunk3l\PhpDesignPatterns\Creational\Builder\ClassicWatchBuilder;
+use Hyunk3l\PhpDesignPatterns\Creational\Builder\Components\Box;
+use Hyunk3l\PhpDesignPatterns\Creational\Builder\Watch;
+use Hyunk3l\PhpDesignPatterns\Creational\Builder\WatchBuilderInterface;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -37,8 +40,9 @@ class ClassicWatchBuilderTest extends TestCase
     /**
      * Testing interface contract.
      */
-    public function testInterfaceContract() {
-        $this->assertInstanceOf('PhpDesignPatterns\Creational\Builder\WatchBuilderInterface', $this->builder);
+    public function testInterfaceContract()
+    {
+        $this->assertInstanceOf(WatchBuilderInterface::class, $this->builder);
     }
 
     /**
@@ -47,7 +51,7 @@ class ClassicWatchBuilderTest extends TestCase
     public function testWatchCreation()
     {
         $this->builder->createWatch();
-        $this->assertInstanceOf('PhpDesignPatterns\Creational\Builder\Watch', $this->builder->getWatch());
+        $this->assertInstanceOf(Watch::class, $this->builder->getWatch());
     }
 
     /**
@@ -58,8 +62,7 @@ class ClassicWatchBuilderTest extends TestCase
         $this->builder->createWatch();
         $this->builder->addBox();
 
-        $expected = array("watch box" => $this->getMock("PhpDesignPatterns\\Creational\\Builder\\Components\\Box"));
-        $this->assertInstanceOf('PhpDesignPatterns\Creational\Builder\Watch', $this->builder->getWatch());
+        $this->assertInstanceOf(Watch::class, $this->builder->getWatch());
     }
 
     /**
@@ -70,7 +73,6 @@ class ClassicWatchBuilderTest extends TestCase
         $this->builder->createWatch();
         $this->builder->addHands();
 
-        $expected = array("Minutes Hand" => $this->getMock("PhpDesignPatterns\\Creational\\Builder\\Components\\Hand"));
-        $this->assertInstanceOf('PhpDesignPatterns\Creational\Builder\Watch', $this->builder->getWatch());
+        $this->assertInstanceOf(Watch::class, $this->builder->getWatch());
     }
 }

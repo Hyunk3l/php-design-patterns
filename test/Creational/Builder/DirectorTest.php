@@ -3,6 +3,7 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Creational\Builder;
 
 use Hyunk3l\PhpDesignPatterns\Creational\Builder\Director;
+use Hyunk3l\PhpDesignPatterns\Creational\Builder\WatchBuilderInterface;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -29,7 +30,10 @@ class DirectorTest extends TestCase
             'getWatch',
             'setWatch',
         );
-        $mocked_builder = $this->getMock('PhpDesignPatterns\Creational\Builder\WatchBuilderInterface', $methods);
+        $mocked_builder = $this->getMockBuilder(WatchBuilderInterface::class)
+            ->disableOriginalConstructor()
+            ->setMethods($methods)
+            ->getMock();
         $mocked_builder->expects($this->once())->method('createWatch')->will($this->returnValue($mocked_builder));
         $mocked_builder->expects($this->once())->method('addMovements')->will($this->returnValue($mocked_builder));
         $mocked_builder->expects($this->once())->method('addHands')->will($this->returnValue($mocked_builder));

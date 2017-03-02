@@ -3,6 +3,7 @@
 namespace Tests\Structural\Composite;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Composite\PhoneDisplay;
+use Hyunk3l\PhpDesignPatterns\Structural\Composite\PhoneElement;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -47,9 +48,8 @@ class PhoneDisplayTest extends TestCase
      */
     public function testAddChild()
     {
-        $expected_instance = "PhpDesignPatterns\\Structural\\Composite\\PhoneElement";
-        $phone_element = $this->getMock($expected_instance, array("add", "remove", "build"));
-        $this->assertInstanceOf($expected_instance, $this->phone_display->add($phone_element));
+        $phone_element = $this->getMockBuilder(PhoneElement::class)->setMethods(array("add", "remove", "build"))->getMock();
+        $this->assertInstanceOf(PhoneElement::class, $this->phone_display->add($phone_element));
     }
 
     /**
@@ -57,7 +57,6 @@ class PhoneDisplayTest extends TestCase
      */
     public function testRemoveChild()
     {
-        $expected_instance = "PhpDesignPatterns\\Structural\\Composite\\PhoneElement";
-        $this->assertInstanceOf($expected_instance, $this->phone_display->remove("just_a_key"));
+        $this->assertInstanceOf(PhoneElement::class, $this->phone_display->remove("just_a_key"));
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Hyunk3l\Test\PhpDesignPatterns\Behavioral\Command;
 
+use Hyunk3l\PhpDesignPatterns\Behavioral\Command\ReceiverInterface;
 use Hyunk3l\PhpDesignPatterns\Behavioral\Command\SwitchButtonCommand;
 use PHPUnit\Framework\TestCase;
 
@@ -17,7 +18,10 @@ class SwitchButtonCommandTest extends TestCase
      */
     public function testExecuteCommand()
     {
-        $receiver = $this->getMock("\\PhpDesignPatterns\\Behavioral\\Command\\ReceiverInterface", array("executeCommand"));
+        $receiver = $this->getMockBuilder(ReceiverInterface::class)
+            ->setMethods(["executeCommand"])
+            ->disableOriginalConstructor()
+            ->getMock();
         $receiver
             ->expects($this->once())
             ->method("executeCommand")

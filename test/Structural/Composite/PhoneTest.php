@@ -3,6 +3,7 @@
 namespace Tests\Structural\Composite;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Composite\Phone;
+use Hyunk3l\PhpDesignPatterns\Structural\Composite\PhoneElement;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -52,14 +53,15 @@ class PhoneTest extends TestCase
             'remove',
             'build',
         );
-        $element_interface = "PhpDesignPatterns\\Structural\\Composite\\PhoneElement";
-        $display_mock = $this->getMock($element_interface, $methods);
+        $display_mock = $this->getMockBuilder(PhoneElement::class)->setMethods($methods)->getMock();
         $display_mock
             ->expects($this->once())
             ->method("build")
             ->will($this->returnValue("This is a mocked display.".PHP_EOL))
         ;
-        $button_mock = $this->getMock($element_interface, $methods);
+        $button_mock = $this->getMockBuilder(PhoneElement::class)
+            ->setMethods($methods)
+            ->getMock();
         $button_mock
             ->expects($this->once())
             ->method("build")
@@ -82,14 +84,13 @@ class PhoneTest extends TestCase
             'remove',
             'build',
         );
-        $element_interface = "PhpDesignPatterns\\Structural\\Composite\\PhoneElement";
-        $display_mock = $this->getMock($element_interface, $methods);
+        $display_mock = $this->getMockBuilder(PhoneElement::class)->setMethods($methods)->getMock();
         $display_mock
             ->expects($this->once())
             ->method("build")
             ->will($this->returnValue("This is a mocked display.".PHP_EOL))
         ;
-        $button_mock = $this->getMock($element_interface, $methods);
+        $button_mock = $this->getMockBuilder(PhoneElement::class)->setMethods($methods)->getMock();
         $button_mock
             ->expects($this->never())
             ->method("build")
@@ -112,14 +113,18 @@ class PhoneTest extends TestCase
             'remove',
             'build',
         );
-        $element_interface = "PhpDesignPatterns\\Structural\\Composite\\PhoneElement";
-        $display_mock = $this->getMock($element_interface, $methods);
+        $display_mock = $this->getMockBuilder(PhoneElement::class)
+            ->disableOriginalConstructor()
+            ->setMethods($methods)
+            ->getMock();
         $display_mock
             ->expects($this->once())
             ->method("build")
             ->will($this->returnValue("This is a mocked display.".PHP_EOL))
         ;
-        $button_mock = $this->getMock($element_interface, $methods);
+        $button_mock = $this->getMockBuilder(PhoneElement::class)
+            ->setMethods($methods)
+            ->getMock();
         $button_mock
             ->expects($this->once())
             ->method("build")
