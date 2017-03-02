@@ -2,42 +2,24 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory;
 
-/**
- * Class VolkswagenCarFactory
- * @package Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory
- */
+use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Volkswagen\SportCar;
+use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Volkswagen\CityCar;
+use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Volkswagen\FamilyCar;
+
 class VolkswagenCarFactory extends AbstractCarFactory
 {
-    /**
-     * @param $name
-     * @param $color
-     * @param $engine_specs
-     * @return Volkswagen\SportCar
-     */
-    public function createSportCar($name, $color, $engine_specs)
+    public function createSportCar(string $name, string $color, string $engineSpecs): CarInterface
     {
-        return new Volkswagen\SportCar($name, $color, $engine_specs);
+        return new SportCar($name, $color, $engineSpecs);
     }
 
-    /**
-     * @param $name
-     * @param $color
-     * @param $engine_specs
-     * @return Volkswagen\CityCar
-     */
-    public function createCityCar($name, $color, $engine_specs)
+    public function createCityCar(string $name, string $color, string $engineSpecs): CarInterface
     {
-        return new Volkswagen\CityCar($name, $color, $engine_specs);
+        return new CityCar($name, $color, $engineSpecs);
     }
 
-    /**
-     * @param $name
-     * @param $color
-     * @param $engine_specs
-     * @return Volkswagen\FamilyCar
-     */
-    public function createFamilyCar($name, $color, $engine_specs)
+    public function createFamilyCar(string $name, string $color, string $engineSpecs): CarInterface
     {
-        return new Volkswagen\FamilyCar($name, $color, $engine_specs);
+        return new FamilyCar($name, $color, $engineSpecs);
     }
 }

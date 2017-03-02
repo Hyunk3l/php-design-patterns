@@ -4,25 +4,29 @@ namespace Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory;
 
 abstract class BaseCar implements CarInterface
 {
-    public function __construct($name, $color, $engine_specs)
+    private $name;
+    private $color;
+    private $engineSpecs;
+
+    public function __construct(string $name, string $color, string $engineSpecs)
     {
         $this->name         = $name;
         $this->color        = $color;
-        $this->engine_specs = $engine_specs;
+        $this->engineSpecs = $engineSpecs;
     }
 
-    public function getColor()
+    public function getColor(): string
     {
         return $this->color;
     }
 
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function getEngineSpecs()
+    public function getEngineSpecs(): string
     {
-        return $this->engine_specs;
+        return $this->engineSpecs;
     }
 }

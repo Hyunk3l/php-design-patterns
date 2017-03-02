@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 class PhoneDisplayTest extends TestCase
 {
     /**
-     * PhoneDisplay instance for test.
+     * PhoneDisplay wolkswagenCarFactory for test.
      *
      * @var PhoneDisplay
      */

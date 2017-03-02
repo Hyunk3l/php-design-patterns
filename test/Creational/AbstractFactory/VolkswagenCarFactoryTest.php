@@ -3,33 +3,43 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Creational\AbstractFactory;
 
 use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\VolkswagenCarFactory;
-use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\AbstractCarFactory;
 use PHPUnit\Framework\TestCase;
 
 class VolkswagenCarFactoryTest extends TestCase
 {
-    /**
-     * Instance of VolkswagenCarFactory.
-     *
-     * @var AbstractCarFactory
-     */
-    private $instance;
+    private $wolkswagenCarFactory;
 
-    /**
-     * Setup configurations.
-     */
     public function setUp()
     {
-        $this->instance = new VolkswagenCarFactory();
+        $this->wolkswagenCarFactory = new VolkswagenCarFactory();
     }
 
     /**
-     * Testing sport car creation.
+     * @test
+     * @dataProvider providerVolkswagenCars
      */
-    public function testSportCar()
+    public function shouldCreateVolkswagenCars(string $method, string $type)
     {
-        $expected   = "Volkswagen Sport car!\nName:Golf GTI\nColor:candy white\nEngine:3.0 200cv\n";
-        $result     = (string) $this->instance->createSportCar("Golf GTI", "candy white", "3.0 200cv");
-        $this->assertEquals($expected, $result, "The result is not the expected one.");
+        $expected = "Volkswagen $type car!\nName:Golf GTI\nColor:candy white\nEngine:3.0 200cv\n";
+        $car = (string) $this->wolkswagenCarFactory->$method("Golf GTI", "candy white", "3.0 200cv");
+        $this->assertEquals($expected, $car);
+    }
+
+    public function providerVolkswagenCars()
+    {
+        return [
+            'should create sport car' => [
+                'method' => 'createSportCar',
+                'type' => 'Sport',
+            ],
+            'should create city car' => [
+                'method' => 'createCityCar',
+                'type' => 'City',
+            ],
+            'should create family car' => [
+                'method' => 'createFamilyCar',
+                'type' => 'Family',
+            ],
+        ];
     }
 }

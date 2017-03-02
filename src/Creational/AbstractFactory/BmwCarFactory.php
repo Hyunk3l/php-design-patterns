@@ -2,42 +2,24 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory;
 
-/**
- * Class BmwCarFactory
- * @package Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory
- */
+use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Bmw\SportCar;
+use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Bmw\CityCar;
+use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Bmw\FamilyCar;
+
 class BmwCarFactory extends AbstractCarFactory
 {
-    /**
-     * @param $name
-     * @param $color
-     * @param $engine_specs
-     * @return Bmw\SportCar
-     */
-    public function createSportCar($name, $color, $engine_specs)
+    public function createSportCar(string $name, string $color, string $engineSpecs): CarInterface
     {
-        return new Bmw\SportCar($name, $color, $engine_specs);
+        return new SportCar($name, $color, $engineSpecs);
     }
 
-    /**
-     * @param $name
-     * @param $color
-     * @param $engine_specs
-     * @return Bmw\CityCar
-     */
-    public function createCityCar($name, $color, $engine_specs)
+    public function createCityCar(string $name, string $color, string $engineSpecs): CarInterface
     {
-        return new Bmw\CityCar($name, $color, $engine_specs);
+        return new CityCar($name, $color, $engineSpecs);
     }
 
-    /**
-     * @param $name
-     * @param $color
-     * @param $engine_specs
-     * @return Bmw\FamilyCar
-     */
-    public function createFamilyCar($name, $color, $engine_specs)
+    public function createFamilyCar(string $name, string $color, string $engineSpecs): CarInterface
     {
-        return new Bmw\FamilyCar($name, $color, $engine_specs);
+        return new FamilyCar($name, $color, $engineSpecs);
     }
 }

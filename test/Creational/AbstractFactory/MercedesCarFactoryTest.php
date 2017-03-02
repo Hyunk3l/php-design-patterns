@@ -3,33 +3,53 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Creational\AbstractFactory;
 
 use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\MercedesCarFactory;
-use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\AbstractCarFactory;
 use PHPUnit\Framework\TestCase;
 
 class MercedesCarFactoryTest extends TestCase
 {
-    /**
-     * Instance of MercedesCarFactory.
-     *
-     * @var AbstractCarFactory
-     */
-    private $instance;
+    const GENERIC_CAR_NAME = "A1 AMG";
 
-    /**
-     * Setup configurations.
-     */
+    const GENERIC_CAR_COLOR = "grey space";
+
+    const GENERIC_CAR_ENGINE_SPECS = "3.0 300cv";
+
+    private $mercedesCarFactory;
+
     public function setUp()
     {
-        $this->instance = new MercedesCarFactory();
+        $this->mercedesCarFactory = new MercedesCarFactory();
     }
 
     /**
-     * Testing sport car creation.
+     * @test
+     * @dataProvider providerCreateMercedesCars
      */
-    public function testSportCar()
+    public function shouldCreateMercedesCars(string $method, string $type)
     {
-        $expected   = "Mercedes Sport car!\nName:A1 AMG\nColor:grey space\nEngine:3.0 300cv\n";
-        $result     = (string) $this->instance->createSportCar("A1 AMG", "grey space", "3.0 300cv");
-        $this->assertEquals($expected, $result, "The result is not the expected one.");
+        $expected   = "Mercedes $type car!\nName:A1 AMG\nColor:grey space\nEngine:3.0 300cv\n";
+        $sportCar     = (string) $this->mercedesCarFactory->$method(
+            self::GENERIC_CAR_NAME,
+            self::GENERIC_CAR_COLOR,
+            self::GENERIC_CAR_ENGINE_SPECS
+        );
+        $this->assertEquals($expected, $sportCar);
+    }
+
+    public function providerCreateMercedesCars()
+    {
+        return [
+            'should create sport car' => [
+                'method' => 'createSportCar',
+                'type' => 'Sport'
+            ],
+            'should create city car' => [
+                'method' => 'createCityCar',
+                'type' => 'City'
+            ],
+            'should create family car' => [
+                'method' => 'createFamilyCar',
+                'type' => 'Family'
+            ],
+        ];
     }
 }

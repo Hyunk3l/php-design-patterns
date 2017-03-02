@@ -3,33 +3,82 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Creational\AbstractFactory;
 
 use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\BmwCarFactory;
-use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\AbstractCarFactory;
 use PHPUnit\Framework\TestCase;
 
 class BmwCarFactoryTest extends TestCase
 {
-    /**
-     * Instance of BmwCarFactory.
-     *
-     * @var AbstractCarFactory
-     */
-    private $instance;
+    const GENERIC_CAR_NAME = "i7";
 
-    /**
-     * Set up configurations.
-     */
+    const GENERIC_CAR_COLOR = "red";
+
+    const GENERIC_CAR_ENGINE_SPECS = "3.0 TDI";
+
+    private $bmwCarFactory;
+
     public function setUp()
     {
-        $this->instance = new BmwCarFactory();
+        $this->bmwCarFactory = new BmwCarFactory();
     }
 
     /**
-     * Testing sport car creation.
+     * @test
      */
-    public function testSportCar()
+    public function shouldCreateABmwSportCar()
     {
-        $expected   = "BMW Sport car!\nName:i7\nColor:red\nEngine:3.0 TDI\n";
-        $result     = (string) $this->instance->createSportCar("i7", "red", "3.0 TDI");
-        $this->assertEquals($expected, $result, "The result is not the expected one.");
+        $expected = $this->createCarDescription(
+            "Sport",
+            self::GENERIC_CAR_NAME,
+            self::GENERIC_CAR_COLOR,
+            self::GENERIC_CAR_ENGINE_SPECS
+        );
+        $sportCar = (string) $this->bmwCarFactory->createSportCar(
+            self::GENERIC_CAR_NAME,
+            self::GENERIC_CAR_COLOR,
+            self::GENERIC_CAR_ENGINE_SPECS
+        );
+        $this->assertEquals($expected, $sportCar);
+    }
+
+    /**
+     * @test
+     */
+    public function shouldCreateABmwCityCar()
+    {
+        $expected = $this->createCarDescription(
+            "City",
+            self::GENERIC_CAR_NAME,
+            self::GENERIC_CAR_COLOR,
+            self::GENERIC_CAR_ENGINE_SPECS
+        );
+        $cityCar  = (string) $this->bmwCarFactory->createCityCar(
+            self::GENERIC_CAR_NAME,
+            self::GENERIC_CAR_COLOR,
+            self::GENERIC_CAR_ENGINE_SPECS
+        );
+        $this->assertEquals($expected, $cityCar);
+    }
+
+    /**
+     * @test
+     */
+    public function shouldCreateABmwFamilyCar()
+    {
+        $expected = $this->createCarDescription(
+            "Family",
+            self::GENERIC_CAR_NAME,
+            self::GENERIC_CAR_COLOR,
+            self::GENERIC_CAR_ENGINE_SPECS
+        );
+        $familyCar  = (string) $this->bmwCarFactory->createFamilyCar(
+            self::GENERIC_CAR_NAME,
+            self::GENERIC_CAR_COLOR,
+            self::GENERIC_CAR_ENGINE_SPECS
+        );
+        $this->assertEquals($expected, $familyCar);
+    }
+
+    private function createCarDescription($type, $name, $color, $engine)
+    {
+        return "BMW $type car!". PHP_EOL. "Name:$name" . PHP_EOL . "Color:$color". PHP_EOL."Engine:$engine".PHP_EOL;
     }
 }

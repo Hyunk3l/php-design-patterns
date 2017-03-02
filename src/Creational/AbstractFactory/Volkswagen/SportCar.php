@@ -4,18 +4,9 @@ namespace Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Volkswagen;
 
 use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\BaseCar;
 
-/**
- * Class SportCar
- * @package Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Volkswagen
- */
 class SportCar extends BaseCar
 {
-    /**
-     * Returns car details.
-     *
-     * @return string
-     */
-    public function __toString()
+    public function __toString(): string
     {
         $car_details = "Volkswagen Sport car!".PHP_EOL;
         $car_details .= "Name:".$this->getName().PHP_EOL;

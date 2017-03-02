@@ -44,6 +44,6 @@ class DirectorTest extends TestCase
 
         $this->director = new Director();
         $result = $this->director->build($mocked_builder);
-        $this->assertInstanceOf("stdClass", $result, 'The result has not the expected instance.');
+        $this->assertInstanceOf("stdClass", $result, 'The result has not the expected bmwCarFactory.');
     }
 }
