@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpDesignPatterns\Tests\Structural\Flyweight;
+namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Flyweight;
 
-use PhpDesignPatterns\Structural\Flyweight\Smartphone;
+use Hyunk3l\PhpDesignPatterns\Structural\Flyweight\Smartphone;
 
 class SmartphoneTest extends \PHPUnit_Framework_TestCase
 {

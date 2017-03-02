@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpDesignPatterns\Tests\Behavioral\Command;
+namespace Hyunk3l\Test\PhpDesignPatterns\Behavioral\Command;
 
-use PhpDesignPatterns\Behavioral\Command\CommandInvoker;
+use Hyunk3l\PhpDesignPatterns\Behavioral\Command\CommandInvoker;
 
 /**
  * Class CommandInvokerTest

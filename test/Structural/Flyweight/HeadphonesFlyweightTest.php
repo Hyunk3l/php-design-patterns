@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpDesignPatterns\Tests\Structural\Flyweight;
+namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Flyweight;
 
-use PhpDesignPatterns\Structural\Flyweight\HeadphonesFlyweight;
+use Hyunk3l\PhpDesignPatterns\Structural\Flyweight\HeadphonesFlyweight;
 
 /**
  * Class HeadphonesFlyweightTest

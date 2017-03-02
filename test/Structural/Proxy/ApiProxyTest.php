@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpDesignPatterns\Tests\Structural\Proxy;
+namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Proxy;
 
-use PhpDesignPatterns\Structural\Proxy\ApiProxy;
+use Hyunk3l\PhpDesignPatterns\Structural\Proxy\ApiProxy;
 
 /**
  * Class ApiProxyTest

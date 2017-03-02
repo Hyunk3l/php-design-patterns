@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpDesignPatterns\Tests\Structural\Facade;
+namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Facade;
 
-use PhpDesignPatterns\Structural\Facade\CoffeeMakerFacade;
+use Hyunk3l\PhpDesignPatterns\Structural\Facade\CoffeeMakerFacade;
 
 /**
  * Class CoffeeMakerFacadeTest

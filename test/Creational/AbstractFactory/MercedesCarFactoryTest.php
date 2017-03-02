@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpDesignPatterns\Tests\Creational\AbstractFactory;
+namespace Hyunk3l\Test\PhpDesignPatterns\Creational\AbstractFactory;
 
-use PhpDesignPatterns\Creational\AbstractFactory\MercedesCarFactory;
-use PhpDesignPatterns\Creational\AbstractFactory\AbstractCarFactory;
+use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\MercedesCarFactory;
+use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\AbstractCarFactory;
 
 class MercedesCarFactoryTest extends \PHPUnit_Framework_TestCase
 {

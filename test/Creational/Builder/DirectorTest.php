@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpDesignPatterns\Tests\Creational\Builder;
+namespace Hyunk3l\Test\PhpDesignPatterns\Creational\Builder;
 
-use PhpDesignPatterns\Creational\Builder\Director;
+use Hyunk3l\PhpDesignPatterns\Creational\Builder\Director;
 
 /**
  * Class DirectorTest

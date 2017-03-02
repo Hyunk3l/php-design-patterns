@@ -2,7 +2,7 @@
 
 namespace Tests\Structural\Composite;
 
-use PhpDesignPatterns\Structural\Composite\PhoneDisplay;
+use Hyunk3l\PhpDesignPatterns\Structural\Composite\PhoneDisplay;
 
 /**
  * Class PhoneDisplayTest

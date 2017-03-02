@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpDesignPatterns\Tests\Structural\Decorator;
+namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Decorator;
 
-use PhpDesignPatterns\Structural\Decorator\JsonResponse;
+use Hyunk3l\PhpDesignPatterns\Structural\Decorator\JsonResponse;
 
 /**
  * Class JsonResponseTest

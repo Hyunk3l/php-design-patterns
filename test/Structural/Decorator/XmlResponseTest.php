@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpDesignPatterns\Tests\Structural\Decorator;
+namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Decorator;
 
-use PhpDesignPatterns\Structural\Decorator\XmlResponse;
+use Hyunk3l\PhpDesignPatterns\Structural\Decorator\XmlResponse;
 
 /**
  * Class XmlResponseTest

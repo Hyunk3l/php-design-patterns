@@ -2,7 +2,7 @@
 
 namespace Tests\Structural\Composite;
 
-use PhpDesignPatterns\Structural\Composite\PhoneButton;
+use Hyunk3l\PhpDesignPatterns\Structural\Composite\PhoneButton;
 
 /**
  * Class PhoneButtonTest

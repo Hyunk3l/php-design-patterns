@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpDesignPatterns\Tests\Structural\Facade;
+namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Facade;
 
-use PhpDesignPatterns\Structural\Facade\WaterDispenser;
+use Hyunk3l\PhpDesignPatterns\Structural\Facade\WaterDispenser;
 
 /**
  * Class WaterDispenserTest
