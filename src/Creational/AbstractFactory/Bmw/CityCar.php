@@ -4,11 +4,11 @@ namespace Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Bmw;
 
 require_once __DIR__ . '/../BaseCar.php';
 
-use PhpDesignPatterns\Creational\AbstractFactory\BaseCar;
+use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\BaseCar;
 
 /**
  * Class CityCar
- * @package Creational\AbstractFactory\Bmw
+ * @package Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Bmw
  */
 class CityCar extends BaseCar
 {

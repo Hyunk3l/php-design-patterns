@@ -6,7 +6,7 @@ require_once __DIR__ . '/AbstractCarFactory.php';
 
 /**
  * Class MercedesCarFactory
- * @package Creational\AbstractFactory
+ * @package Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory
  */
 class MercedesCarFactory extends AbstractCarFactory
 {

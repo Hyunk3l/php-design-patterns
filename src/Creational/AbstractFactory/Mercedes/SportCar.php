@@ -2,11 +2,11 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Mercedes;
 
-use PhpDesignPatterns\Creational\AbstractFactory\BaseCar;
+use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\BaseCar;
 
 /**
  * Class SportCar
- * @package Creational\AbstractFactory\Mercedes
+ * @package Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\Mercedes
  */
 class SportCar extends BaseCar
 {

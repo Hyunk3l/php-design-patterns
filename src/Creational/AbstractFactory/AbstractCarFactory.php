@@ -4,7 +4,7 @@ namespace Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory;
 
 /**
  * Class AbstractCarFactory
- * @package Creational\AbstractFactory
+ * @package Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory
  */
 abstract class AbstractCarFactory
 {

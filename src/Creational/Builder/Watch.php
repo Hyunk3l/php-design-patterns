@@ -2,7 +2,7 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Creational\Builder;
 
-use PhpDesignPatterns\Creational\Builder\Components\ComponentInterface;
+use Hyunk3l\PhpDesignPatterns\Creational\Builder\Components\ComponentInterface;
 
 /**
  * Class Watch
