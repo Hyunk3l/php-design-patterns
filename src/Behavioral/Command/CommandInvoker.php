@@ -2,10 +2,6 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Behavioral\Command;
 
-/**
- * Class CommandInvoker
- * @package Hyunk3l\PhpDesignPatterns\Behavioral\Command
- */
 class CommandInvoker
 {
     /**
@@ -15,13 +11,7 @@ class CommandInvoker
      */
     private $command;
 
-    /**
-     * Set command dependency.
-     *
-     * @param CommandInterface $command
-     * @return CommandInvoker
-     */
-    public function setCommand(CommandInterface $command)
+    public function setCommand(CommandInterface $command): self
     {
         $this->command = $command;
         return $this;
