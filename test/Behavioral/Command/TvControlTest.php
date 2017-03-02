@@ -5,19 +5,17 @@ namespace Hyunk3l\Test\PhpDesignPatterns\Behavioral\Command;
 use Hyunk3l\PhpDesignPatterns\Behavioral\Command\TvControl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * Class TvControlTest
- * @package PhpDesignPatterns\Tests\Behavioral\Command
- */
 class TvControlTest extends TestCase
 {
     /**
-     * Testing execute.
+     * @test
      */
-    public function testExecuteCommand()
+    public function shouldExecuteACommand()
     {
-        $control            = new TvControl;
-        $expected_command   = "dummy command.";
-        $this->assertEquals($expected_command, $control->executeCommand($expected_command));
+        $expectedCommand   = "dummy command.";
+        $this->assertEquals(
+            $expectedCommand,
+            (new TvControl)->executeCommand($expectedCommand)
+        );
     }
 }
