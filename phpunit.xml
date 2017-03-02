@@ -9,6 +9,10 @@
         <blacklist>
             <directory>./vendor</directory>
         </blacklist>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">test/</directory>
+            <file>/path/to/file</file>
+        </whitelist>
     </filter>
     <logging>
     <log type="coverage-html" target="coverage/" lowUpperBound="35"
