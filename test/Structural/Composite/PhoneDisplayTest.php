@@ -3,12 +3,13 @@
 namespace Tests\Structural\Composite;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Composite\PhoneDisplay;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class PhoneDisplayTest
  * @package Tests\Structural\Composite
  */
-class PhoneDisplayTest extends \PHPUnit_Framework_TestCase
+class PhoneDisplayTest extends TestCase
 {
     /**
      * PhoneDisplay instance for test.

@@ -4,8 +4,9 @@ namespace Hyunk3l\Test\PhpDesignPatterns\Creational\AbstractFactory;
 
 use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\BmwCarFactory;
 use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\AbstractCarFactory;
+use PHPUnit\Framework\TestCase;
 
-class BmwCarFactoryTest extends \PHPUnit_Framework_TestCase
+class BmwCarFactoryTest extends TestCase
 {
     /**
      * Instance of BmwCarFactory.

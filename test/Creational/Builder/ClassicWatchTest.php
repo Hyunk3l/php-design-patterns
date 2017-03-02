@@ -3,12 +3,13 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Creational\Builder;
 
 use Hyunk3l\PhpDesignPatterns\Creational\Builder\ClassicWatch;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class ClassicWatchTest
  * @package PhpDesignPatterns\Tests\Creational\Builder
  */
-class ClassicWatchTest extends \PHPUnit_Framework_TestCase
+class ClassicWatchTest extends TestCase
 {
     /**
      * Testing add watch.

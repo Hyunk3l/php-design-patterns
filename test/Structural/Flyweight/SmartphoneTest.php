@@ -3,8 +3,9 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Flyweight;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Flyweight\Smartphone;
+use PHPUnit\Framework\TestCase;
 
-class SmartphoneTest extends \PHPUnit_Framework_TestCase
+class SmartphoneTest extends TestCase
 {
     /**
      * Instance of Smartphone.

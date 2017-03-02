@@ -3,12 +3,13 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Decorator;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Decorator\XmlResponse;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class XmlResponseTest
  * @package PhpDesignPatterns\Tests\Structural\Decorator
  */
-class XmlResponseTest extends \PHPUnit_Framework_TestCase
+class XmlResponseTest extends TestCase
 {
     /**
      * Test instance.

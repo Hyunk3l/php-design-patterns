@@ -3,12 +3,13 @@
 namespace Tests\Structural\Composite;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Composite\PhoneButton;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class PhoneButtonTest
  * @package Tests\Structural\Composite
  */
-class PhoneButtonTest extends \PHPUnit_Framework_TestCase
+class PhoneButtonTest extends TestCase
 {
     /**
      * PhoneButton instance for test.

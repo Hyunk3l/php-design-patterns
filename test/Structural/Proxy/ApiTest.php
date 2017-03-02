@@ -3,12 +3,13 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Proxy;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Proxy\Api;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class ApiTest
  * @package PhpDesignPatterns\Tests\Structural\Proxy
  */
-class ApiTest extends \PHPUnit_Framework_TestCase
+class ApiTest extends TestCase
 {
     /**
      * Testing doApiCall.

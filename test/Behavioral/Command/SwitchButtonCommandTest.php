@@ -3,12 +3,14 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Behavioral\Command;
 
 use Hyunk3l\PhpDesignPatterns\Behavioral\Command\SwitchButtonCommand;
+use PHPUnit\Framework\TestCase;
+
 
 /**
  * Class SwitchButtonCommandTest
  * @package PhpDesignPatterns\Tests\Behavioral\Command
  */
-class SwitchButtonCommandTest extends \PHPUnit_Framework_TestCase
+class SwitchButtonCommandTest extends TestCase
 {
     /**
      * Testing execute.

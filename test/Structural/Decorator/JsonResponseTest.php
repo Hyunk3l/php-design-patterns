@@ -3,12 +3,13 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Decorator;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Decorator\JsonResponse;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class JsonResponseTest
  * @package PhpDesignPatterns\Tests\Structural\Decorator
  */
-class JsonResponseTest extends \PHPUnit_Framework_TestCase
+class JsonResponseTest extends TestCase
 {
     /**
      * Test instance.

@@ -3,12 +3,13 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Flyweight;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Flyweight\HeadphonesFlyweight;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class HeadphonesFlyweightTest
  * @package PhpDesignPatterns\Tests\Structural\Flyweight
  */
-class HeadphonesFlyweightTest extends \PHPUnit_Framework_TestCase
+class HeadphonesFlyweightTest extends TestCase
 {
     /**
      * Testing getPrice.

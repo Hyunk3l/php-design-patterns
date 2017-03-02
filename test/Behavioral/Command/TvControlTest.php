@@ -3,12 +3,13 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Behavioral\Command;
 
 use Hyunk3l\PhpDesignPatterns\Behavioral\Command\TvControl;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class TvControlTest
  * @package PhpDesignPatterns\Tests\Behavioral\Command
  */
-class TvControlTest extends \PHPUnit_Framework_TestCase
+class TvControlTest extends TestCase
 {
     /**
      * Testing execute.

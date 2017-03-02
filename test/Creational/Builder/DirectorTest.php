@@ -3,12 +3,13 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Creational\Builder;
 
 use Hyunk3l\PhpDesignPatterns\Creational\Builder\Director;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class DirectorTest
  * @package PhpDesignPatterns\Tests\Creational\Builder
  */
-class DirectorTest extends \PHPUnit_Framework_TestCase
+class DirectorTest extends TestCase
 {
     /**
      * Instance of Director class.

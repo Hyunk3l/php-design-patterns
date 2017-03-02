@@ -3,12 +3,13 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Behavioral\Command;
 
 use Hyunk3l\PhpDesignPatterns\Behavioral\Command\CommandInvoker;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class CommandInvokerTest
  * @package PhpDesignPatterns\Tests\Behavioral\Command
  */
-class CommandInvokerTest extends \PHPUnit_Framework_TestCase
+class CommandInvokerTest extends TestCase
 {
     /**
      * Testing the command.

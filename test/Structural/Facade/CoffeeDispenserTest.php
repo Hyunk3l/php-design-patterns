@@ -3,12 +3,13 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Facade;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Facade\CoffeeDispenser;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class CoffeeDispenserTest
  * @package PhpDesignPatterns\Tests\Structural\Facade
  */
-class CoffeeDispenserTest extends \PHPUnit_Framework_TestCase
+class CoffeeDispenserTest extends TestCase
 {
     /**
      * Testing get product.

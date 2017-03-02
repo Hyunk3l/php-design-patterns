@@ -3,12 +3,13 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Creational\Builder;
 
 use Hyunk3l\PhpDesignPatterns\Creational\Builder\SportWatchBuilder;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class SportWatchBuilderTest
  * @package PhpDesignPatterns\Tests\Creational\Builder
  */
-class SportWatchBuilderTest extends \PHPUnit_Framework_TestCase
+class SportWatchBuilderTest extends TestCase
 {
     /**
      * Instance of SportWatchBuilder class.

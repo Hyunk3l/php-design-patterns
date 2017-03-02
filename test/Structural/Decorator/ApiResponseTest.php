@@ -3,12 +3,13 @@
 namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Decorator;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Decorator\ApiResponse;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class ApiResponseTest
  * @package Tests\Structural\Decorator
  */
-class ApiResponseTest extends \PHPUnit_Framework_TestCase
+class ApiResponseTest extends TestCase
 {
     /**
      * Instance needed for testing.
