@@ -2,83 +2,51 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Creational\Builder;
 
-/**
- * Class ClassicWatchBuilder
- * @package Hyunk3l\PhpDesignPatterns\Creational\Builder
- */
+use Hyunk3l\PhpDesignPatterns\Creational\Builder\Components\Box;
+use Hyunk3l\PhpDesignPatterns\Creational\Builder\Components\Band;
+use Hyunk3l\PhpDesignPatterns\Creational\Builder\Components\Movement;
+use Hyunk3l\PhpDesignPatterns\Creational\Builder\Components\Hand;
+
 class ClassicWatchBuilder implements WatchBuilderInterface
 {
-    /**
-     * Instance of SportWatch.
-     *
-     * @var SportWatch
-     */
     private $watch;
 
-    /**
-     * @return mixed
-     */
-    public function createWatch()
+    public function createWatch(): WatchBuilderInterface
     {
-        $this->setWatch(new ClassicWatch);
+        $this->watch = new ClassicWatch;
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function addBox()
+    public function addBox(): WatchBuilderInterface
     {
-        $this->watch->addComponent("Watch box", new Components\Box());
+        $this->watch->addComponent("Watch box", new Box());
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function addHands()
+    public function addHands(): WatchBuilderInterface
     {
-        $this->watch->addComponent("Seconds hand", new Components\Hand());
-        $this->watch->addComponent("Minutes hand", new Components\Hand());
-        $this->watch->addComponent("Hours hand", new Components\Hand());
+        $this->watch->addComponent("Seconds hand", new Hand());
+        $this->watch->addComponent("Minutes hand", new Hand());
+        $this->watch->addComponent("Hours hand", new Hand());
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function addBands()
+    public function addBands(): WatchBuilderInterface
     {
-        $this->watch->addComponent("Leather upper band", new Components\Band());
-        $this->watch->addComponent("Leather lower band", new Components\Band());
+        $this->watch->addComponent("Leather upper band", new Band());
+        $this->watch->addComponent("Leather lower band", new Band());
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function addMovements()
+    public function addMovements(): WatchBuilderInterface
     {
-        $this->watch->addComponent("Principal watch movement", new Components\Movement());
-        $this->watch->addComponent("Date watch movement", new Components\Movement());
+        $this->watch->addComponent("Principal watch movement", new Movement());
+        $this->watch->addComponent("Date watch movement", new Movement());
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getWatch()
+    public function getWatch(): Watch
     {
         return $this->watch;
-    }
-
-    /**
-     * @param Watch $watch
-     * @return ClassicWatchBuilder
-     */
-    public function setWatch(Watch $watch)
-    {
-        $this->watch = $watch;
-        return $this;
     }
 }

@@ -2,45 +2,17 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Creational\Builder;
 
-/**
- * Interface WatchBuilderInterface
- * @package Hyunk3l\PhpDesignPatterns\Creational\Builder
- */
 interface WatchBuilderInterface
 {
-    /**
-     * @return mixed
-     */
-    public function createWatch();
+    public function createWatch(): self;
 
-    /**
-     * @return mixed
-     */
-    public function addBox();
+    public function addBox(): self;
 
-    /**
-     * @return mixed
-     */
-    public function addHands();
+    public function addHands(): self;
 
-    /**
-     * @return mixed
-     */
-    public function addBands();
+    public function addBands(): self;
 
-    /**
-     * @return mixed
-     */
-    public function addMovements();
+    public function addMovements(): self;
 
-    /**
-     * @return mixed
-     */
-    public function getWatch();
-
-    /**
-     * @param Watch $watch
-     * @return mixed
-     */
-    public function setWatch(Watch $watch);
+    public function getWatch(): Watch;
 }

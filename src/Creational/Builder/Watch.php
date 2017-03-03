@@ -4,35 +4,17 @@ namespace Hyunk3l\PhpDesignPatterns\Creational\Builder;
 
 use Hyunk3l\PhpDesignPatterns\Creational\Builder\Components\ComponentInterface;
 
-/**
- * Class Watch
- * @package Hyunk3l\PhpDesignPatterns\Creational\Builder
- */
 abstract class Watch
 {
-    /**
-     * List of watch components.
-     *
-     * @var array
-     */
     private $watch_components;
 
-    /**
-     * @param $name
-     * @param ComponentInterface $component
-     * @return $this
-     */
-    public function addComponent($name, ComponentInterface $component)
+    public function addComponent(string $name, ComponentInterface $component): self
     {
         $this->watch_components[$name] = $component;
         return $this;
     }
 
-    /**
-     *
-     * @return array
-     */
-    public function getWatchComponents()
+    public function getWatchComponents(): array
     {
         return $this->watch_components;
     }
