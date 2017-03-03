@@ -2,11 +2,7 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Composite;
 
-abstract class PhoneElement
+interface PhoneElement
 {
-    abstract public function build(): string;
-
-    abstract public function add(PhoneElement $element): self;
-
-    abstract public function remove(string $childKey): self;
+    public function getPrice(): float;
 }

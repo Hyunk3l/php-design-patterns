@@ -2,19 +2,18 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Composite;
 
-class PhoneDisplay extends PhoneElement
+class PhoneDisplay implements PhoneElement
 {
-    public function build(): string
+    private $price;
+
+    public function getPrice(): float
     {
-        return "This is a phone display.".PHP_EOL;
+        return $this->price;
     }
 
-    public function add(PhoneElement $element): PhoneElement
+    public function setPrice(float $price): PhoneElement
     {
-        return $this;
-    }
-   public function remove(string $childKey): PhoneElement
-    {
+        $this->price = $price;
         return $this;
     }
 }

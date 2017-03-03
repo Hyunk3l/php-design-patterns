@@ -2,35 +2,22 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Composite;
 
-class Phone extends PhoneElement
+class Phone implements PhoneElement
 {
-    private $elements;
+    private $phoneElements;
 
-    public function build(): string
+    public function __construct(array $phoneElements)
     {
-        $phone = "";
-        if(empty($this->elements)) {
-            return $phone;
-        }
 
-        foreach($this->elements as $element)
-        {
-            $phone .= $element->build();
-        }
-        return $phone;
+        $this->phoneElements = $phoneElements;
     }
 
-    public function add(PhoneElement $element): PhoneElement
+    public function getPrice(): float
     {
-        $this->elements[] = $element;
-        return $this;
-    }
-
-    public function remove(string $childKey): PhoneElement
-    {
-        if(!empty($this->elements[$childKey])) {
-            unset($this->elements[$childKey]);
+        $totalPrice = 0;
+        foreach ($this->phoneElements as $phoneElement) {
+            $totalPrice += $phoneElement->getPrice();
         }
-        return $this;
+        return $totalPrice;
     }
 }
