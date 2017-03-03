@@ -6,10 +6,6 @@ use Hyunk3l\PhpDesignPatterns\Structural\Composite\PhoneButton;
 use Hyunk3l\PhpDesignPatterns\Structural\Composite\PhoneElement;
 use PHPUnit\Framework\TestCase;
 
-/**
- * Class PhoneButtonTest
- * @package Tests\Structural\Composite
- */
 class PhoneButtonTest extends TestCase
 {
     /**
@@ -25,14 +21,6 @@ class PhoneButtonTest extends TestCase
     public function setUp()
     {
         $this->phone_button = new PhoneButton();
-    }
-
-    /**
-     * Destroy test elements.
-     */
-    public function tearDown()
-    {
-        $this->phone_button = null;
     }
 
     /**

@@ -2,29 +2,11 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Composite;
 
-/**
- * Class PhoneElement
- * @package Hyunk3l\PhpDesignPatterns\Structural\Composite
- */
 abstract class PhoneElement
 {
-    /**
-     * Builds an element.
-     * @return string
-     */
-    abstract public function build();
+    abstract public function build(): string;
 
-    /**
-     * @param PhoneElement $element Element to add.
-     * @return PhoneElement
-     */
-    abstract public function add(PhoneElement $element);
+    abstract public function add(PhoneElement $element): self;
 
-    /**
-     * Remove a PhoneElement child.
-     *
-     * @param mixed $child_key
-     * @return PhoneElement
-     */
-    abstract public function remove($child_key);
+    abstract public function remove(string $childKey): self;
 }
