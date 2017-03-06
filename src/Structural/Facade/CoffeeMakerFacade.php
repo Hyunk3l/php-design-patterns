@@ -2,93 +2,49 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Facade;
 
-/**
- * Class CoffeeMakerFacade
- * @package Hyunk3l\PhpDesignPatterns\Structural\Facade
- */
 Class CoffeeMakerFacade
 {
-    /**
-     * Minimum number of cups to make.
-     *
-     * @var integer
-     */
     const MINIMUM_CUPS = 1;
 
-    /**
-     * Instance of Dispenser.
-     *
-     * @var Dispenser
-     */
-    private $coffee_dispenser;
+    private $coffeeDispenser;
 
-    /**
-     * Instance of Dispenser.
-     *
-     * @var Dispenser
-     */
-    private $sugar_dispenser;
+    private $sugarDispenser;
 
-    /**
-     * Instance of Dispenser.
-     *
-     * @var Dispenser
-     */
-    private $water_dispenser;
+    private $waterDispenser;
 
-    /**
-     *
-     */
     public function __construct()
     {
-        $this->coffee_dispenser = new CoffeeDispenser;
-        $this->sugar_dispenser  = new SugarDispenser;
-        $this->water_dispenser  = new WaterDispenser;
+        $this->coffeeDispenser = new CoffeeDispenser;
+        $this->sugarDispenser  = new SugarDispenser;
+        $this->waterDispenser  = new WaterDispenser;
     }
 
-    /**
-     * Make N cups of coffee.
-     *
-     * @param integer $cups Number of cups to make.
-     * @return array
-     */
-    public function makeCups($cups)
+    public function makeCups(int $numberOfCupsToMake): array
     {
-        $cups = $this->checkCups($cups);
+        $numberOfCupsToMake = $this->checkCupsToMake($numberOfCupsToMake);
 
-        $coffee_cups = array();
-        for($i=1;$i<$cups+1;$i++) {
+        $coffeeCups = [];
+        for($i=1; $i<$numberOfCupsToMake+1; $i++) {
             $products = implode(',', $this->getProducts());
-            $coffee_cups["coffee #".$i] = $products;
+            $coffeeCups["coffee #".$i] = $products;
         }
-        return $coffee_cups;
+        return $coffeeCups;
     }
 
-    /**
-     * Just check cups.
-     *
-     * @param mixed $cups
-     * @return integer
-     */
-    private function checkCups($cups)
+    private function checkCupsToMake(int $numberOfCupsToMake): int
     {
-        if(static::MINIMUM_CUPS > $cups) {
-            $cups = static::MINIMUM_CUPS;
+        if(static::MINIMUM_CUPS > $numberOfCupsToMake) {
+            $numberOfCupsToMake = static::MINIMUM_CUPS;
         }
-        return $cups;
+        return $numberOfCupsToMake;
     }
 
-    /**
-     * Get products from different dispensers.
-     *
-     * @return array
-     */
-    private function getProducts()
+    private function getProducts(): array
     {
         return array(
-            $this->sugar_dispenser->getProduct(),
-            $this->coffee_dispenser->getProduct(),
-            $this->water_dispenser->getProduct(),
+            $this->sugarDispenser->getProduct(),
+            $this->coffeeDispenser->getProduct(),
+            $this->waterDispenser->getProduct(),
         );
     }
 }
