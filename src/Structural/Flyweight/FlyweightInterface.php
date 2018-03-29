@@ -1,6 +1,6 @@
 <?php
 
-namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Flyweight;
+namespace Hyunk3l\PhpDesignPatterns\Structural\Flyweight;
 
 interface FlyweightInterface
 {

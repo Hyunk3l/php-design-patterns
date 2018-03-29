@@ -2,11 +2,9 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Flyweight;
 
-use Hyunk3l\Test\PhpDesignPatterns\Structural\Flyweight\FlyweightInterface;
-
 class FlyweightFactory
 {
-    private $pool;
+    private $pool = [];
 
     public function get(string $phrase): FlyweightInterface
     {
@@ -16,7 +14,7 @@ class FlyweightFactory
         return $this->pool[$phrase];
     }
 
-    public function count()
+    public function count(): int
     {
         return count($this->pool);
     }
