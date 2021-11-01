@@ -6,11 +6,8 @@ class SwitchButtonCommand implements CommandInterface
 {
     const COMMAND_MESSAGE = "Tv has been switched on.";
 
-    private $control;
-
-    public function __construct(ReceiverInterface $control)
+    public function __construct(private ReceiverInterface $control)
     {
-        $this->control = $control;
     }
 
     public function execute(): string

@@ -8,8 +8,5 @@ namespace Hyunk3l\PhpDesignPatterns\Behavioral\Command;
  */
 interface CommandInterface
 {
-    /**
-     * @return mixed
-     */
-    public function execute();
+    public function execute(): string;
 }
