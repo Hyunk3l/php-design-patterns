@@ -2,9 +2,9 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Facade;
 
-Class CoffeeMakerFacade
+class CoffeeMakerFacade
 {
-    const MINIMUM_CUPS = 1;
+    public const MINIMUM_CUPS = 1;
 
     private $coffeeDispenser;
 
@@ -14,9 +14,9 @@ Class CoffeeMakerFacade
 
     public function __construct()
     {
-        $this->coffeeDispenser = new CoffeeDispenser;
-        $this->sugarDispenser  = new SugarDispenser;
-        $this->waterDispenser  = new WaterDispenser;
+        $this->coffeeDispenser = new CoffeeDispenser();
+        $this->sugarDispenser  = new SugarDispenser();
+        $this->waterDispenser  = new WaterDispenser();
     }
 
     public function makeCups(int $numberOfCupsToMake): array
@@ -24,7 +24,7 @@ Class CoffeeMakerFacade
         $numberOfCupsToMake = $this->checkCupsToMake($numberOfCupsToMake);
 
         $coffeeCups = [];
-        for($i=1; $i<$numberOfCupsToMake+1; $i++) {
+        for ($i=1; $i<$numberOfCupsToMake+1; $i++) {
             $products = implode(',', $this->getProducts());
             $coffeeCups["coffee #".$i] = $products;
         }
@@ -33,7 +33,7 @@ Class CoffeeMakerFacade
 
     private function checkCupsToMake(int $numberOfCupsToMake): int
     {
-        if(static::MINIMUM_CUPS > $numberOfCupsToMake) {
+        if (static::MINIMUM_CUPS > $numberOfCupsToMake) {
             $numberOfCupsToMake = static::MINIMUM_CUPS;
         }
         return $numberOfCupsToMake;

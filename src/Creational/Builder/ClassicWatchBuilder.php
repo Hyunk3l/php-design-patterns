@@ -13,7 +13,7 @@ class ClassicWatchBuilder implements WatchBuilderInterface
 
     public function createWatch(): WatchBuilderInterface
     {
-        $this->watch = new ClassicWatch;
+        $this->watch = new ClassicWatch();
         return $this;
     }
 

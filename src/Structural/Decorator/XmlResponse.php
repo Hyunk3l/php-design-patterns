@@ -17,7 +17,7 @@ class XmlResponse extends Decorator
     {
         $output = $this->wrapper->render();
         $xml    = new \SimpleXMLElement("<root />");
-        foreach($output as $row_key => $row_value) {
+        foreach ($output as $row_key => $row_value) {
             $xml->addChild($row_key, $row_value);
         }
         return $xml->asXml();

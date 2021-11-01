@@ -6,7 +6,7 @@ namespace Hyunk3l\PhpDesignPatterns\Structural\Facade;
  * Class WaterDispenser
  * @package Hyunk3l\PhpDesignPatterns\Structural\Facade
  */
-Class WaterDispenser implements DispenserInterface
+class WaterDispenser implements DispenserInterface
 {
     /**
      * Get the product.

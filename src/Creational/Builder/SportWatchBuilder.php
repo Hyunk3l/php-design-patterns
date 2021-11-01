@@ -13,7 +13,7 @@ class SportWatchBuilder implements WatchBuilderInterface
 
     public function createWatch(): WatchBuilderInterface
     {
-        $this->watch = new SportWatch;
+        $this->watch = new SportWatch();
         return $this;
     }
 

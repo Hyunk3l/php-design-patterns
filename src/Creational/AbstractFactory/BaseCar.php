@@ -8,7 +8,8 @@ abstract class BaseCar implements CarInterface
         private string $name,
         private string $color,
         private string $engineSpecs
-        ) { }
+    ) {
+    }
 
     public function getColor(): string
     {

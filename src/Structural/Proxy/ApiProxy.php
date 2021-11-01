@@ -34,8 +34,8 @@ class ApiProxy extends Api
      */
     private function init()
     {
-        if(!$this->wrapper) {
-            $this->wrapper = new Api;
+        if (!$this->wrapper) {
+            $this->wrapper = new Api();
         }
     }
 }

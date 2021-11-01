@@ -2,3 +2,5 @@
 /.idea/
 /coverage/
 .phpunit.result.cache
+.php-cs-fixer.cache
+tools

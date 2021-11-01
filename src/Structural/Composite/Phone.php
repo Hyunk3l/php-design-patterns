@@ -8,7 +8,6 @@ class Phone implements PhoneElement
 
     public function __construct(array $phoneElements)
     {
-
         $this->phoneElements = $phoneElements;
     }
 

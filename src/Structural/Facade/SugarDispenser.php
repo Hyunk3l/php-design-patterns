@@ -6,7 +6,7 @@ namespace Hyunk3l\PhpDesignPatterns\Structural\Facade;
  * Class SugarDispenser
  * @package Hyunk3l\PhpDesignPatterns\Structural\Facade
  */
-Class SugarDispenser implements DispenserInterface
+class SugarDispenser implements DispenserInterface
 {
     /**
      * Get the product.
