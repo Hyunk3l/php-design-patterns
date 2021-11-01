@@ -11,19 +11,7 @@ namespace Hyunk3l\PhpDesignPatterns\Structural\Decorator;
  */
 abstract class Decorator implements ResponseInterface
 {
-    /**
-     * Instance of ResponseInterface.
-     *
-     * @var ResponseInterface
-     */
-    protected $wrapper;
-
-    /**
-     *
-     * @param ResponseInterface $response The object we need to extend responsabilities to.
-     */
-    public function __construct(ResponseInterface $response)
+    public function __construct(protected ResponseInterface $wrapper)
     {
-        $this->wrapper = $response;
     }
 }

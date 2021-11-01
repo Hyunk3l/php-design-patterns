@@ -4,11 +4,8 @@ namespace Hyunk3l\PhpDesignPatterns\Structural\Composite;
 
 class Phone implements PhoneElement
 {
-    private $phoneElements;
-
-    public function __construct(array $phoneElements)
+    public function __construct(private array $phoneElements)
     {
-        $this->phoneElements = $phoneElements;
     }
 
     public function getPrice(): float
