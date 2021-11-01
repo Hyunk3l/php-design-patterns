@@ -7,11 +7,11 @@ use PHPUnit\Framework\TestCase;
 
 class VolkswagenCarFactoryTest extends TestCase
 {
-    private $wolkswagenCarFactory;
+    private $volkswagenCarFactory;
 
-    public function setUp()
+    protected function setUp(): void
     {
-        $this->wolkswagenCarFactory = new VolkswagenCarFactory();
+        $this->volkswagenCarFactory = new VolkswagenCarFactory();
     }
 
     /**
@@ -21,7 +21,7 @@ class VolkswagenCarFactoryTest extends TestCase
     public function shouldCreateVolkswagenCars(string $method, string $type)
     {
         $expected = "Volkswagen $type car!\nName:Golf GTI\nColor:candy white\nEngine:3.0 200cv\n";
-        $car = (string) $this->wolkswagenCarFactory->$method("Golf GTI", "candy white", "3.0 200cv");
+        $car = (string) $this->volkswagenCarFactory->$method("Golf GTI", "candy white", "3.0 200cv");
         $this->assertEquals($expected, $car);
     }
 

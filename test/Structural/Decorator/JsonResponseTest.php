@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 class JsonResponseTest extends TestCase
 {
     /**
-     * Test wolkswagenCarFactory.
+     * Test volkswagenCarFactory.
      *
      * @var JsonResponse
      */

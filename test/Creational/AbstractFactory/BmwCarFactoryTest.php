@@ -15,7 +15,7 @@ class BmwCarFactoryTest extends TestCase
 
     private $bmwCarFactory;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->bmwCarFactory = new BmwCarFactory();
     }

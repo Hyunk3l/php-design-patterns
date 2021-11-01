@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 class XmlResponseTest extends TestCase
 {
     /**
-     * Test wolkswagenCarFactory.
+     * Test volkswagenCarFactory.
      *
      * @var XmlResponse
      */

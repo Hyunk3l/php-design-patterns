@@ -15,7 +15,7 @@ class MercedesCarFactoryTest extends TestCase
 
     private $mercedesCarFactory;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->mercedesCarFactory = new MercedesCarFactory();
     }
