@@ -9,5 +9,5 @@
 
 ## Running Tests
 
-* Run `composer install`
+* Run `./composer.phar install`
 * Now launch UTs running `./vendor/bin/phpunit test/`
