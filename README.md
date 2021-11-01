@@ -10,4 +10,4 @@
 ## Running Tests
 
 * Run `composer install`
-* Now launch UTs running `vendor/bin/phpunit test/`
+* Now launch UTs running `./vendor/bin/phpunit test/`
