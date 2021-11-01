@@ -17,7 +17,7 @@ class SportWatchTest extends TestCase
      */
     public function testWatchComponent()
     {
-        $watch = new SportWatch;
+        $watch = new SportWatch();
         $mock_component = $this->getMockBuilder(ComponentInterface::class)
             ->disableOriginalConstructor()
             ->getMock();

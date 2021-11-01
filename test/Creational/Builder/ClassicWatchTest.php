@@ -17,7 +17,7 @@ class ClassicWatchTest extends TestCase
      */
     public function testWatchComponent()
     {
-        $watch = new ClassicWatch;
+        $watch = new ClassicWatch();
         $mockedComponent = $this->getMockBuilder(ComponentInterface::class)
             ->disableOriginalConstructor()
             ->getMock();

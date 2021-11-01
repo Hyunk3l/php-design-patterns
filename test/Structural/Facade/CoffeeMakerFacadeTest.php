@@ -17,7 +17,7 @@ class CoffeeMakerFacadeTest extends TestCase
         ];
         $this->assertEquals(
             $expected,
-            (new CoffeeMakerFacade)->makeCups(0)
+            (new CoffeeMakerFacade())->makeCups(0)
         );
     }
 
@@ -34,7 +34,7 @@ class CoffeeMakerFacadeTest extends TestCase
         ];
         $this->assertEquals(
             $expected,
-            (new CoffeeMakerFacade)->makeCups(count($expected))
+            (new CoffeeMakerFacade())->makeCups(count($expected))
         );
     }
 }
