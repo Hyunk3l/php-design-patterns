@@ -13,11 +13,11 @@ class JsonResponseTest extends TestCase
     /**
      * @test
      */
-    public function testRender()
+    public function shouldBeAbleToConvertResponseToJsonString()
     {
         $fakeRender = ['message' => 'api response to json'];
         $apiMock = $this->getMockBuilder(ResponseInterface::class)
-            ->setMethods(array('render'))
+            ->setMethods(['render'])
             ->getMock();
         $apiMock
             ->expects($this->once())
