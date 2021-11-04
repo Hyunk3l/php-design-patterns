@@ -4,7 +4,7 @@ namespace Hyunk3l\PhpDesignPatterns\Structural\Composite;
 
 class PhoneDisplay implements PhoneElement
 {
-    private $price;
+    private float $price;
 
     public function getPrice(): float
     {

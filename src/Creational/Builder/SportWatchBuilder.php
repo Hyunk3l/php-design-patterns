@@ -9,7 +9,7 @@ use Hyunk3l\PhpDesignPatterns\Creational\Builder\Components\Movement;
 
 class SportWatchBuilder implements WatchBuilderInterface
 {
-    private $watch;
+    private Watch $watch;
 
     public function createWatch(): WatchBuilderInterface
     {

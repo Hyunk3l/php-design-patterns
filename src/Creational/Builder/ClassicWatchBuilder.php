@@ -9,7 +9,7 @@ use Hyunk3l\PhpDesignPatterns\Creational\Builder\Components\Hand;
 
 class ClassicWatchBuilder implements WatchBuilderInterface
 {
-    private $watch;
+    private Watch $watch;
 
     public function createWatch(): WatchBuilderInterface
     {

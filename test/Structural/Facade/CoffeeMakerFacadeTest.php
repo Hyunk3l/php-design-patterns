@@ -10,7 +10,7 @@ class CoffeeMakerFacadeTest extends TestCase
     /**
      * @test
      */
-    public function shouldMakeOneCoffeIfNoNumberIsPassed()
+    public function shouldMakeOneCoffeeIfNoNumberIsPassed()
     {
         $expected = [
             'coffee #1' => 'sugar: 3mg,coffee: 10mg,water: 5ml',

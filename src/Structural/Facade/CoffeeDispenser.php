@@ -2,7 +2,7 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Facade;
 
-class CoffeeDispenser implements DispenserInterface
+class CoffeeDispenser implements Dispenser
 {
     public function getProduct(): string
     {

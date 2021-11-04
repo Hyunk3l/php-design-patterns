@@ -2,7 +2,7 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Facade;
 
-interface DispenserInterface
+interface Dispenser
 {
     public function getProduct(): mixed;
 }

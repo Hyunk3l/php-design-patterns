@@ -6,11 +6,11 @@ class CoffeeMakerFacade
 {
     private const MINIMUM_CUPS = 1;
 
-    private $coffeeDispenser;
+    private Dispenser $coffeeDispenser;
 
-    private $sugarDispenser;
+    private Dispenser $sugarDispenser;
 
-    private $waterDispenser;
+    private Dispenser $waterDispenser;
 
     public function __construct()
     {
