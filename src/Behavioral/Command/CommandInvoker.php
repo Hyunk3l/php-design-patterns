@@ -4,12 +4,9 @@ namespace Hyunk3l\PhpDesignPatterns\Behavioral\Command;
 
 class CommandInvoker
 {
-    /**
-     * Instance of CommandInterface.
-     *
-     * @var CommandInterface
-     */
-    private $command;
+    public function __construct(private ?CommandInterface $command = null)
+    {
+    }
 
     public function setCommand(CommandInterface $command): self
     {
@@ -17,12 +14,7 @@ class CommandInvoker
         return $this;
     }
 
-    /**
-     * Run the command.
-     *
-     * @return mixed
-     */
-    public function run()
+    public function run(): mixed
     {
         return $this->command->execute();
     }
