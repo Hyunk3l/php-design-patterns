@@ -8,8 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 class JsonResponseTest extends TestCase
 {
-    private JsonResponse $jsonRender;
-
     /**
      * @test
      */
@@ -24,8 +22,8 @@ class JsonResponseTest extends TestCase
             ->method('render')
             ->will($this->returnValue($fakeRender))
         ;
-        $this->jsonRender = new JsonResponse($apiMock);
+        $jsonRender = new JsonResponse($apiMock);
         $expected = '{"message":"api response to json"}';
-        $this->assertEquals($expected, $this->jsonRender->render());
+        $this->assertEquals($expected, $jsonRender->render());
     }
 }

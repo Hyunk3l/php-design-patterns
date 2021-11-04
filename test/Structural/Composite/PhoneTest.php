@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Structural\Composite;
+namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Composite;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Composite\Phone;
 use Hyunk3l\PhpDesignPatterns\Structural\Composite\PhoneButton;

@@ -6,16 +6,12 @@ use Hyunk3l\PhpDesignPatterns\Creational\Builder\Components\ComponentInterface;
 use Hyunk3l\PhpDesignPatterns\Creational\Builder\SportWatch;
 use PHPUnit\Framework\TestCase;
 
-/**
- * Class SportWatchTest
- * @package PhpDesignPatterns\Tests\Creational\Builder
- */
 class SportWatchTest extends TestCase
 {
     /**
-     * Testing add watch.
+     * @test
      */
-    public function testWatchComponent()
+    public function shouldAddAComponentToASportWatch()
     {
         $watch = new SportWatch();
         $mock_component = $this->getMockBuilder(ComponentInterface::class)
@@ -23,7 +19,7 @@ class SportWatchTest extends TestCase
             ->getMock();
         $watch->addComponent("Test component", $mock_component);
 
-        $expected = array("Test component" => $mock_component);
+        $expected = ["Test component" => $mock_component];
         $this->assertEquals($expected, $watch->getWatchComponents(), "the result is not the expected one.");
     }
 }

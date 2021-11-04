@@ -6,23 +6,14 @@ use Hyunk3l\PhpDesignPatterns\Structural\Decorator\ResponseInterface;
 use Hyunk3l\PhpDesignPatterns\Structural\Decorator\XmlResponse;
 use PHPUnit\Framework\TestCase;
 
-/**
- * Class XmlResponseTest
- * @package PhpDesignPatterns\Tests\Structural\Decorator
- */
 class XmlResponseTest extends TestCase
 {
-    /**
-     * Test volkswagenCarFactory.
-     *
-     * @var XmlResponse
-     */
-    private $xml_render;
+    private XmlResponse $xmlRender;
 
     /**
-     * Testing decorated render.
+     * @test
      */
-    public function testRender()
+    public function shouldBeAbleToConvertResponseToXml()
     {
         $fake_render = array('message' => 'api response to xml');
         $api_mock = $this->getMockBuilder(ResponseInterface::class)

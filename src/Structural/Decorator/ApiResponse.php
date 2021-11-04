@@ -4,7 +4,7 @@ namespace Hyunk3l\PhpDesignPatterns\Structural\Decorator;
 
 class ApiResponse implements ResponseInterface
 {
-    public function render(): mixed
+    public function render(): array
     {
         return [
             'status'    => 'ok',

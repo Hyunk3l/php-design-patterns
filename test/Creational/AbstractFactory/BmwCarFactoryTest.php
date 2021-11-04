@@ -26,12 +26,9 @@ class BmwCarFactoryTest extends TestCase
     public function shouldCreateABmwSportCar()
     {
         $expected = $this->createCarDescription(
-            "Sport",
-            self::GENERIC_CAR_NAME,
-            self::GENERIC_CAR_COLOR,
-            self::GENERIC_CAR_ENGINE_SPECS
+            "Sport"
         );
-        $sportCar = (string) $this->bmwCarFactory->createSportCar(
+        $sportCar = (string)$this->bmwCarFactory->createSportCar(
             self::GENERIC_CAR_NAME,
             self::GENERIC_CAR_COLOR,
             self::GENERIC_CAR_ENGINE_SPECS
@@ -45,12 +42,9 @@ class BmwCarFactoryTest extends TestCase
     public function shouldCreateABmwCityCar()
     {
         $expected = $this->createCarDescription(
-            "City",
-            self::GENERIC_CAR_NAME,
-            self::GENERIC_CAR_COLOR,
-            self::GENERIC_CAR_ENGINE_SPECS
+            "City"
         );
-        $cityCar  = (string) $this->bmwCarFactory->createCityCar(
+        $cityCar = (string)$this->bmwCarFactory->createCityCar(
             self::GENERIC_CAR_NAME,
             self::GENERIC_CAR_COLOR,
             self::GENERIC_CAR_ENGINE_SPECS
@@ -63,13 +57,8 @@ class BmwCarFactoryTest extends TestCase
      */
     public function shouldCreateABmwFamilyCar()
     {
-        $expected = $this->createCarDescription(
-            "Family",
-            self::GENERIC_CAR_NAME,
-            self::GENERIC_CAR_COLOR,
-            self::GENERIC_CAR_ENGINE_SPECS
-        );
-        $familyCar  = (string) $this->bmwCarFactory->createFamilyCar(
+        $expected = $this->createCarDescription("Family");
+        $familyCar = (string)$this->bmwCarFactory->createFamilyCar(
             self::GENERIC_CAR_NAME,
             self::GENERIC_CAR_COLOR,
             self::GENERIC_CAR_ENGINE_SPECS
@@ -77,8 +66,8 @@ class BmwCarFactoryTest extends TestCase
         $this->assertEquals($expected, $familyCar);
     }
 
-    private function createCarDescription($type, $name, $color, $engine)
+    private function createCarDescription(string $type): string
     {
-        return "BMW $type car!". PHP_EOL. "Name:$name" . PHP_EOL . "Color:$color". PHP_EOL."Engine:$engine";
+        return "BMW $type car!" . PHP_EOL . "Name:" . (self::GENERIC_CAR_NAME) . "" . PHP_EOL . "Color:" . (self::GENERIC_CAR_COLOR) . "" . PHP_EOL . "Engine:" . (self::GENERIC_CAR_ENGINE_SPECS) . "";
     }
 }

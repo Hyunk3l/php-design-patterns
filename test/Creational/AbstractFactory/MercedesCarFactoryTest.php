@@ -7,11 +7,11 @@ use PHPUnit\Framework\TestCase;
 
 class MercedesCarFactoryTest extends TestCase
 {
-    public const GENERIC_CAR_NAME = "A1 AMG";
+    private const GENERIC_CAR_NAME = "A1 AMG";
 
-    public const GENERIC_CAR_COLOR = "grey space";
+    private const GENERIC_CAR_COLOR = "grey space";
 
-    public const GENERIC_CAR_ENGINE_SPECS = "3.0 300cv";
+    private const GENERIC_CAR_ENGINE_SPECS = "3.0 300cv";
 
     private MercedesCarFactory $mercedesCarFactory;
 
@@ -35,7 +35,7 @@ class MercedesCarFactoryTest extends TestCase
         $this->assertEquals($expected, $sportCar);
     }
 
-    public function providerCreateMercedesCars()
+    public function providerCreateMercedesCars(): array
     {
         return [
             'should create sport car' => [
