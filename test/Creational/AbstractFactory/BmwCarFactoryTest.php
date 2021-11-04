@@ -7,11 +7,11 @@ use PHPUnit\Framework\TestCase;
 
 class BmwCarFactoryTest extends TestCase
 {
-    public const GENERIC_CAR_NAME = "i7";
+    private const GENERIC_CAR_NAME = "i7";
 
-    public const GENERIC_CAR_COLOR = "red";
+    private const GENERIC_CAR_COLOR = "red";
 
-    public const GENERIC_CAR_ENGINE_SPECS = "3.0 TDI";
+    private const GENERIC_CAR_ENGINE_SPECS = "3.0 TDI";
 
     private $bmwCarFactory;
 
@@ -79,6 +79,6 @@ class BmwCarFactoryTest extends TestCase
 
     private function createCarDescription($type, $name, $color, $engine)
     {
-        return "BMW $type car!". PHP_EOL. "Name:$name" . PHP_EOL . "Color:$color". PHP_EOL."Engine:$engine".PHP_EOL;
+        return "BMW $type car!". PHP_EOL. "Name:$name" . PHP_EOL . "Color:$color". PHP_EOL."Engine:$engine";
     }
 }

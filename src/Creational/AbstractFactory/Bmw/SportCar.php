@@ -8,10 +8,11 @@ class SportCar extends BaseCar
 {
     public function __toString(): string
     {
-        $car_details = "BMW Sport car!".PHP_EOL;
-        $car_details .= "Name:".$this->getName().PHP_EOL;
-        $car_details .= "Color:".$this->getColor().PHP_EOL;
-        $car_details .= "Engine:".$this->getEngineSpecs().PHP_EOL;
-        return $car_details;
+        return <<<EOT
+         BMW Sport car!
+         Name:{$this->getName()}
+         Color:{$this->getColor()}
+         Engine:{$this->getEngineSpecs()}
+         EOT;
     }
 }
