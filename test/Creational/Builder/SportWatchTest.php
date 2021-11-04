@@ -17,9 +17,10 @@ class SportWatchTest extends TestCase
         $mock_component = $this->getMockBuilder(ComponentInterface::class)
             ->disableOriginalConstructor()
             ->getMock();
+        $expected = ["Test component" => $mock_component];
+
         $watch->addComponent("Test component", $mock_component);
 
-        $expected = ["Test component" => $mock_component];
         $this->assertEquals($expected, $watch->getWatchComponents(), "the result is not the expected one.");
     }
 }

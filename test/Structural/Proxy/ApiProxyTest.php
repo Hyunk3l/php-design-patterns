@@ -20,7 +20,9 @@ class ApiProxyTest extends TestCase
                 'name'  => 'foo',
             ],
         ];
-        $api = new ApiProxy();
-        $this->assertEquals($expects, $api->doApiCall('localhost', [], 'GET'));
+
+        $response = (new ApiProxy())->doApiCall('localhost', [], 'GET');
+
+        $this->assertEquals($expects, $response);
     }
 }

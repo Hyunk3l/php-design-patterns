@@ -25,14 +25,14 @@ class BmwCarFactoryTest extends TestCase
      */
     public function shouldCreateABmwSportCar()
     {
-        $expected = $this->createCarDescription(
-            "Sport"
-        );
-        $sportCar = (string)$this->bmwCarFactory->createSportCar(
+        $expected = $this->createCarDescription("Sport");
+
+        $sportCar = $this->bmwCarFactory->createSportCar(
             self::GENERIC_CAR_NAME,
             self::GENERIC_CAR_COLOR,
             self::GENERIC_CAR_ENGINE_SPECS
         );
+
         $this->assertEquals($expected, $sportCar);
     }
 
@@ -41,14 +41,14 @@ class BmwCarFactoryTest extends TestCase
      */
     public function shouldCreateABmwCityCar()
     {
-        $expected = $this->createCarDescription(
-            "City"
-        );
-        $cityCar = (string)$this->bmwCarFactory->createCityCar(
+        $expected = $this->createCarDescription("City");
+
+        $cityCar = $this->bmwCarFactory->createCityCar(
             self::GENERIC_CAR_NAME,
             self::GENERIC_CAR_COLOR,
             self::GENERIC_CAR_ENGINE_SPECS
         );
+
         $this->assertEquals($expected, $cityCar);
     }
 
@@ -58,11 +58,13 @@ class BmwCarFactoryTest extends TestCase
     public function shouldCreateABmwFamilyCar()
     {
         $expected = $this->createCarDescription("Family");
-        $familyCar = (string)$this->bmwCarFactory->createFamilyCar(
+
+        $familyCar = $this->bmwCarFactory->createFamilyCar(
             self::GENERIC_CAR_NAME,
             self::GENERIC_CAR_COLOR,
             self::GENERIC_CAR_ENGINE_SPECS
         );
+
         $this->assertEquals($expected, $familyCar);
     }
 

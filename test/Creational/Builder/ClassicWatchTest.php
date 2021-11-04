@@ -17,9 +17,10 @@ class ClassicWatchTest extends TestCase
         $mockedComponent = $this->getMockBuilder(ComponentInterface::class)
             ->disableOriginalConstructor()
             ->getMock();
+        $expected = ["Test component" => $mockedComponent];
+
         $watch->addComponent("Test component", $mockedComponent);
 
-        $expected = ["Test component" => $mockedComponent];
-        $this->assertEquals($expected, $watch->getWatchComponents(), "the result is not the expected one.");
+        $this->assertEquals($expected, $watch->getWatchComponents());
     }
 }

@@ -16,6 +16,7 @@ class DirectorTest extends TestCase
     public function shouldCreateASportWatch()
     {
         $sportWatch = (new Director())->build(new SportWatchBuilder());
+
         $this->assertEquals(new Hand(), $sportWatch->getWatchComponents()['Seconds hand']);
     }
     /**
@@ -24,6 +25,7 @@ class DirectorTest extends TestCase
     public function shouldCreateAClassicWatch()
     {
         $classicWatch = (new Director())->build(new ClassicWatchBuilder());
+
         $this->assertEquals(new Hand(), $classicWatch->getWatchComponents()['Seconds hand']);
     }
 }

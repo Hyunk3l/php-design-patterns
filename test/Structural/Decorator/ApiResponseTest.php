@@ -12,11 +12,13 @@ class ApiResponseTest extends TestCase
      */
     public function shouldReturnARawApiResponse()
     {
-        $expected   = [
-            'status'    => 'ok',
-            'message'   =>  'raw api response',
+        $expected = [
+            'status' => 'ok',
+            'message' => 'raw api response',
         ];
-        $apiResponse = new ApiResponse();
-        $this->assertEquals($expected, $apiResponse->render(), 'The result is not the expected one.');
+
+        $response = (new ApiResponse())->render();
+
+        $this->assertEquals($expected, $response);
     }
 }

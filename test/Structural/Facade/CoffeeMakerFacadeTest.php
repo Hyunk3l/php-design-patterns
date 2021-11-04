@@ -15,10 +15,10 @@ class CoffeeMakerFacadeTest extends TestCase
         $expected = [
             'coffee #1' => 'sugar: 3mg,coffee: 10mg,water: 5ml',
         ];
-        $this->assertEquals(
-            $expected,
-            (new CoffeeMakerFacade())->makeCups(0)
-        );
+
+        $cupsMade = (new CoffeeMakerFacade())->makeCups(0);
+
+        $this->assertEquals($expected, $cupsMade);
     }
 
     /**
@@ -32,9 +32,9 @@ class CoffeeMakerFacadeTest extends TestCase
             'coffee #3' => 'sugar: 3mg,coffee: 10mg,water: 5ml',
             'coffee #4' => 'sugar: 3mg,coffee: 10mg,water: 5ml',
         ];
-        $this->assertEquals(
-            $expected,
-            (new CoffeeMakerFacade())->makeCups(count($expected))
-        );
+
+        $cupsMade = (new CoffeeMakerFacade())->makeCups(count($expected));
+
+        $this->assertEquals($expected, $cupsMade);
     }
 }

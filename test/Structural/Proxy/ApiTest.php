@@ -13,14 +13,16 @@ class ApiTest extends TestCase
     public function shouldPerformAnApiCallSuccessfully()
     {
         $expects = [
-            'status'    => 200,
-            'message'   => 'Api call performed successfully.',
-            'data'      => [
-                'id'    => 1,
-                'name'  => 'foo',
+            'status' => 200,
+            'message' => 'Api call performed successfully.',
+            'data' => [
+                'id' => 1,
+                'name' => 'foo',
             ],
         ];
-        $api = new Api();
-        $this->assertEquals($expects, $api->doApiCall('localhost', [], 'GET'));
+
+        $response = (new Api())->doApiCall('localhost', [], 'GET');
+
+        $this->assertEquals($expects, $response);
     }
 }

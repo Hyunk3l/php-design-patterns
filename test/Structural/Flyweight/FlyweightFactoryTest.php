@@ -35,7 +35,6 @@ class FlyweightFactoryTest extends TestCase
     public function shouldCountOneIfSameStringIsGotTwice()
     {
         $flyweightFactory = new FlyweightFactory();
-
         $expected = "hello world";
 
         $stringFlyweight = $flyweightFactory->get($expected);
@@ -70,6 +69,7 @@ class FlyweightFactoryTest extends TestCase
         foreach ($stringFlyweights as $stringFlyweight) {
             $flyweightFactory->get($stringFlyweight);
         }
+
         $this->assertEquals(4, $flyweightFactory->count());
     }
 }

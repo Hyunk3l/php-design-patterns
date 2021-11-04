@@ -25,9 +25,8 @@ class SwitchButtonCommandTest extends TestCase
             ->with(self::COMMAND_MESSAGE)
             ->willReturn(self::COMMAND_MESSAGE);
 
-        $this->assertEquals(
-            self::COMMAND_MESSAGE,
-            (new SwitchButtonCommand($receiver))->execute()
-        );
+        $result = (new SwitchButtonCommand($receiver))->execute();
+
+        $this->assertEquals(self::COMMAND_MESSAGE, $result);
     }
 }

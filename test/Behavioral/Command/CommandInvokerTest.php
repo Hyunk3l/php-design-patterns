@@ -22,6 +22,7 @@ class CommandInvokerTest extends TestCase
             ->willReturn($expectedOutput = 'Dummy command!');
 
         $invoker = (new CommandInvoker())->setCommand($command);
+
         $this->assertEquals($expectedOutput, $invoker->run());
     }
 }

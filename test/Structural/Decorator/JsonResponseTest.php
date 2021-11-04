@@ -13,6 +13,7 @@ class JsonResponseTest extends TestCase
      */
     public function shouldBeAbleToConvertResponseToJsonString()
     {
+        $expected = '{"message":"api response to json"}';
         $fakeRender = ['message' => 'api response to json'];
         $apiMock = $this->getMockBuilder(ResponseInterface::class)
             ->setMethods(['render'])
@@ -22,8 +23,9 @@ class JsonResponseTest extends TestCase
             ->method('render')
             ->will($this->returnValue($fakeRender))
         ;
-        $jsonRender = new JsonResponse($apiMock);
-        $expected = '{"message":"api response to json"}';
-        $this->assertEquals($expected, $jsonRender->render());
+
+        $result = (new JsonResponse($apiMock))->render();
+
+        $this->assertEquals($expected, $result);
     }
 }

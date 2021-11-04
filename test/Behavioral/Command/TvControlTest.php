@@ -12,10 +12,10 @@ class TvControlTest extends TestCase
      */
     public function shouldExecuteACommand()
     {
-        $expectedCommand   = "dummy command.";
-        $this->assertEquals(
-            $expectedCommand,
-            (new TvControl())->executeCommand($expectedCommand)
-        );
+        $expectedCommand = "dummy command.";
+
+        $result = (new TvControl())->executeCommand($expectedCommand);
+
+        $this->assertEquals($expectedCommand, $result);
     }
 }
