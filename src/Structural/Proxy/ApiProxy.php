@@ -2,39 +2,19 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Proxy;
 
-/**
- * Class ApiProxy
- * @package Hyunk3l\PhpDesignPatterns\Structural\Proxy
- */
 class ApiProxy extends Api
 {
-    /**
-     * Instance of Api.
-     *
-     * @var Api
-     */
-    private $wrapper;
+    private ?Api $wrapper = null;
 
-    /**
-     * Do api call using proxied object.
-     *
-     * @param string $url
-     * @param array $data
-     * @param string $method
-     * @return array
-     */
-    public function doApiCall($url, array $data, $method)
+    public function doApiCall(string $url, array $data, string $method): array
     {
         $this->init();
         return $this->wrapper->doApiCall($url, $data, $method);
     }
 
-    /**
-     * Initialize the proxied object.
-     */
     private function init()
     {
-        if (!$this->wrapper) {
+        if ($this->wrapper == null) {
             $this->wrapper = new Api();
         }
     }

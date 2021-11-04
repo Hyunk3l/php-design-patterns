@@ -2,18 +2,9 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Facade;
 
-/**
- * Class SugarDispenser
- * @package Hyunk3l\PhpDesignPatterns\Structural\Facade
- */
 class SugarDispenser implements DispenserInterface
 {
-    /**
-     * Get the product.
-     *
-     * @return string
-     */
-    public function getProduct()
+    public function getProduct(): string
     {
         return 'sugar: 3mg';
     }
