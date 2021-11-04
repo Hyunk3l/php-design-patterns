@@ -13,7 +13,7 @@ class MercedesCarFactoryTest extends TestCase
 
     public const GENERIC_CAR_ENGINE_SPECS = "3.0 300cv";
 
-    private $mercedesCarFactory;
+    private MercedesCarFactory $mercedesCarFactory;
 
     protected function setUp(): void
     {

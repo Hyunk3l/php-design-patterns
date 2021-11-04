@@ -13,7 +13,7 @@ class BmwCarFactoryTest extends TestCase
 
     private const GENERIC_CAR_ENGINE_SPECS = "3.0 TDI";
 
-    private $bmwCarFactory;
+    private BmwCarFactory $bmwCarFactory;
 
     protected function setUp(): void
     {

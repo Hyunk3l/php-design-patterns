@@ -6,35 +6,26 @@ use Hyunk3l\PhpDesignPatterns\Structural\Decorator\JsonResponse;
 use Hyunk3l\PhpDesignPatterns\Structural\Decorator\ResponseInterface;
 use PHPUnit\Framework\TestCase;
 
-/**
- * Class JsonResponseTest
- * @package PhpDesignPatterns\Tests\Structural\Decorator
- */
 class JsonResponseTest extends TestCase
 {
-    /**
-     * Test volkswagenCarFactory.
-     *
-     * @var JsonResponse
-     */
-    private $json_render;
+    private JsonResponse $jsonRender;
 
     /**
-     * Testing decorated render.
+     * @test
      */
     public function testRender()
     {
-        $fake_render = array('message' => 'api response to json');
-        $api_mock = $this->getMockBuilder(ResponseInterface::class)
+        $fakeRender = ['message' => 'api response to json'];
+        $apiMock = $this->getMockBuilder(ResponseInterface::class)
             ->setMethods(array('render'))
             ->getMock();
-        $api_mock
+        $apiMock
             ->expects($this->once())
             ->method('render')
-            ->will($this->returnValue($fake_render))
+            ->will($this->returnValue($fakeRender))
         ;
-        $this->json_render = new JsonResponse($api_mock);
+        $this->jsonRender = new JsonResponse($apiMock);
         $expected = '{"message":"api response to json"}';
-        $this->assertEquals($expected, $this->json_render->render());
+        $this->assertEquals($expected, $this->jsonRender->render());
     }
 }

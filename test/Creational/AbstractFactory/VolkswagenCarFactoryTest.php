@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class VolkswagenCarFactoryTest extends TestCase
 {
-    private $volkswagenCarFactory;
+    private VolkswagenCarFactory $volkswagenCarFactory;
 
     protected function setUp(): void
     {

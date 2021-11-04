@@ -4,7 +4,7 @@ namespace Hyunk3l\PhpDesignPatterns\Structural\Flyweight;
 
 class FlyweightFactory
 {
-    private $pool = [];
+    private array $pool = [];
 
     public function get(string $phrase): FlyweightInterface
     {
