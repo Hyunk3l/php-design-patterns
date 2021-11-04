@@ -4,7 +4,7 @@ namespace Hyunk3l\PhpDesignPatterns\Structural\Facade;
 
 class CoffeeMakerFacade
 {
-    public const MINIMUM_CUPS = 1;
+    private const MINIMUM_CUPS = 1;
 
     private $coffeeDispenser;
 
@@ -41,10 +41,10 @@ class CoffeeMakerFacade
 
     private function getProducts(): array
     {
-        return array(
+        return [
             $this->sugarDispenser->getProduct(),
             $this->coffeeDispenser->getProduct(),
             $this->waterDispenser->getProduct(),
-        );
+        ];
     }
 }
