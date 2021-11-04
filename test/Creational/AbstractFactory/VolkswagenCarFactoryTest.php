@@ -20,7 +20,7 @@ class VolkswagenCarFactoryTest extends TestCase
      */
     public function shouldCreateVolkswagenCars(string $method, string $type)
     {
-        $expected = "Volkswagen $type car!\nName:Golf GTI\nColor:candy white\nEngine:3.0 200cv\n";
+        $expected = "Volkswagen $type car!\nName:Golf GTI\nColor:candy white\nEngine:3.0 200cv";
         $car = (string) $this->volkswagenCarFactory->$method("Golf GTI", "candy white", "3.0 200cv");
         $this->assertEquals($expected, $car);
     }

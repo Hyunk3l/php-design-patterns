@@ -26,7 +26,7 @@ class MercedesCarFactoryTest extends TestCase
      */
     public function shouldCreateMercedesCars(string $method, string $type)
     {
-        $expected   = "Mercedes $type car!\nName:A1 AMG\nColor:grey space\nEngine:3.0 300cv\n";
+        $expected   = "Mercedes $type car!\nName:A1 AMG\nColor:grey space\nEngine:3.0 300cv";
         $sportCar     = (string) $this->mercedesCarFactory->$method(
             self::GENERIC_CAR_NAME,
             self::GENERIC_CAR_COLOR,
