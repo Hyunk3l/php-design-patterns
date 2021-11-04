@@ -8,6 +8,8 @@ use PHPUnit\Framework\TestCase;
 
 class SwitchButtonCommandTest extends TestCase
 {
+    public const COMMAND_MESSAGE = "Tv has been switched on.";
+
     /**
      * @test
      */
@@ -20,11 +22,11 @@ class SwitchButtonCommandTest extends TestCase
         $receiver
             ->expects($this->once())
             ->method("executeCommand")
-            ->with(SwitchButtonCommand::COMMAND_MESSAGE)
-            ->willReturn(SwitchButtonCommand::COMMAND_MESSAGE);
+            ->with(self::COMMAND_MESSAGE)
+            ->willReturn(self::COMMAND_MESSAGE);
 
         $this->assertEquals(
-            SwitchButtonCommand::COMMAND_MESSAGE,
+            self::COMMAND_MESSAGE,
             (new SwitchButtonCommand($receiver))->execute()
         );
     }
