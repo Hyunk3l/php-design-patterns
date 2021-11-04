@@ -2,18 +2,9 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Decorator;
 
-/**
- * Class XmlResponse
- * @package Hyunk3l\PhpDesignPatterns\Structural\Decorator
- */
 class XmlResponse extends Decorator
 {
-    /**
-     * Transform output to json.
-     *
-     * @return string
-     */
-    public function render()
+    public function render(): string
     {
         $output = $this->wrapper->render();
         $xml    = new \SimpleXMLElement("<root />");

@@ -2,18 +2,9 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Structural\Decorator;
 
-/**
- * Class JsonResponse
- * @package Hyunk3l\PhpDesignPatterns\Structural\Decorator
- */
 class JsonResponse extends Decorator
 {
-    /**
-     * Transform output to json.
-     *
-     * @return string
-     */
-    public function render()
+    public function render(): string
     {
         $output = $this->wrapper->render();
         return json_encode($output);
