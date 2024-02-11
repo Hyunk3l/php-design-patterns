@@ -21,7 +21,7 @@ class JsonResponseTest extends TestCase
         $apiMock
             ->expects($this->once())
             ->method('render')
-            ->will($this->returnValue($fakeRender))
+            ->willReturn($fakeRender)
         ;
 
         $result = (new JsonResponse($apiMock))->render();

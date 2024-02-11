@@ -24,7 +24,7 @@ XML;
         $apiMock
             ->expects($this->once())
             ->method('render')
-            ->will($this->returnValue($fakeRenderer));
+            ->willReturn($fakeRenderer);
 
         $response = (new XmlResponse($apiMock))->render();
 
