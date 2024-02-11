@@ -16,7 +16,7 @@ class SwitchButtonCommandTest extends TestCase
     public function shouldExecuteSwitchButtonCommand()
     {
         $receiver = $this->getMockBuilder(ReceiverInterface::class)
-            ->setMethods(["executeCommand"])
+            ->onlyMethods(["executeCommand"])
             ->disableOriginalConstructor()
             ->getMock();
         $receiver

@@ -15,7 +15,7 @@ class CommandInvokerTest extends TestCase
     {
         $command = $this->getMockBuilder(CommandInterface::class)
             ->disableOriginalConstructor()
-            ->setMethods(['execute'])
+            ->onlyMethods(['execute'])
             ->getMock();
         $command->expects($this->once())
             ->method('execute')

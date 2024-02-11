@@ -16,7 +16,7 @@ class JsonResponseTest extends TestCase
         $expected = '{"message":"api response to json"}';
         $fakeRender = ['message' => 'api response to json'];
         $apiMock = $this->getMockBuilder(ResponseInterface::class)
-            ->setMethods(['render'])
+            ->onlyMethods(['render'])
             ->getMock();
         $apiMock
             ->expects($this->once())

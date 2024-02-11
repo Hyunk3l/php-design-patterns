@@ -19,7 +19,7 @@ class XmlResponseTest extends TestCase
 XML;
         $fakeRenderer = ['message' => 'api response to xml'];
         $apiMock = $this->getMockBuilder(ResponseInterface::class)
-            ->setMethods(['render'])
+            ->onlyMethods(['render'])
             ->getMock();
         $apiMock
             ->expects($this->once())

@@ -37,7 +37,7 @@ class MercedesCarFactoryTest extends TestCase
         $this->assertEquals($expected, $sportCar);
     }
 
-    public function providerCreateMercedesCars(): array
+    public static function providerCreateMercedesCars(): array
     {
         return [
             'should create sport car' => [
