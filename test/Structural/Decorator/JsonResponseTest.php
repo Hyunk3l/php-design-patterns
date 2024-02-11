@@ -8,10 +8,8 @@ use PHPUnit\Framework\TestCase;
 
 class JsonResponseTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldBeAbleToConvertResponseToJsonString()
+
+    public function testShouldBeAbleToConvertResponseToJsonString()
     {
         $expected = '{"message":"api response to json"}';
         $fakeRender = ['message' => 'api response to json'];

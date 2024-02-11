@@ -7,10 +7,8 @@ use PHPUnit\Framework\TestCase;
 
 class ApiResponseTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldReturnARawApiResponse()
+
+    public function testShouldReturnARawApiResponse()
     {
         $expected = [
             'status' => 'ok',

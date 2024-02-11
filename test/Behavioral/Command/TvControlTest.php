@@ -7,10 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class TvControlTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldExecuteACommand()
+    public function testShouldExecuteACommand()
     {
         $expectedCommand = "dummy command.";
 

@@ -8,10 +8,8 @@ use PHPUnit\Framework\TestCase;
 
 class ClassicWatchBuilderTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldCreateAClassicWatch()
+
+    public function testShouldCreateAClassicWatch()
     {
         $classicWatch = (new ClassicWatchBuilder())
             ->createWatch()

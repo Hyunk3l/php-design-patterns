@@ -7,10 +7,8 @@ use PHPUnit\Framework\TestCase;
 
 class CoffeeMakerFacadeTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldMakeOneCoffeeIfNoNumberIsPassed()
+
+    public function testShouldMakeOneCoffeeIfNoNumberIsPassed()
     {
         $expected = [
             'coffee #1' => 'sugar: 3mg,coffee: 10mg,water: 5ml',
@@ -21,10 +19,8 @@ class CoffeeMakerFacadeTest extends TestCase
         $this->assertEquals($expected, $cupsMade);
     }
 
-    /**
-     * @test
-     */
-    public function shouldMakeAConcreteNumberOfCoffees()
+
+    public function testShouldMakeAConcreteNumberOfCoffees()
     {
         $expected = [
             'coffee #1' => 'sugar: 3mg,coffee: 10mg,water: 5ml',

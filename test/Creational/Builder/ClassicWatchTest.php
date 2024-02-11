@@ -8,10 +8,8 @@ use PHPUnit\Framework\TestCase;
 
 class ClassicWatchTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldAddAComponentToAWatch()
+
+    public function testShouldAddAComponentToAWatch()
     {
         $watch = new ClassicWatch();
         $mockedComponent = $this->getMockBuilder(ComponentInterface::class)

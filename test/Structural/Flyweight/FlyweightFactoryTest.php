@@ -7,18 +7,14 @@ use PHPUnit\Framework\TestCase;
 
 class FlyweightFactoryTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldHaveEmptyFlyweightsPool()
+
+    public function testShouldHaveEmptyFlyweightsPool()
     {
         $this->assertEquals(0, (new FlyweightFactory())->count());
     }
 
-    /**
-     * @test
-     */
-    public function shouldCreateOneStringFlyweight()
+
+    public function testShouldCreateOneStringFlyweight()
     {
         $flyweightFactory = new FlyweightFactory();
 
@@ -29,10 +25,8 @@ class FlyweightFactoryTest extends TestCase
         $this->assertEquals($expected, $stringFlyweight->render());
     }
 
-    /**
-     * @test
-     */
-    public function shouldCountOneIfSameStringIsGotTwice()
+
+    public function testShouldCountOneIfSameStringIsGotTwice()
     {
         $flyweightFactory = new FlyweightFactory();
         $expected = "hello world";
@@ -45,10 +39,8 @@ class FlyweightFactoryTest extends TestCase
         $this->assertEquals($expected, $duplicateStringFlyweight->render());
     }
 
-    /**
-     * @test
-     */
-    public function shouldCountFourWhenShouldCreateOnlyForFlyweights()
+
+    public function testShouldCountFourWhenShouldCreateOnlyForFlyweights()
     {
         $flyweightFactory = new FlyweightFactory();
         $stringFlyweights = [

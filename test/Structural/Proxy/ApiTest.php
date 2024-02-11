@@ -7,10 +7,8 @@ use PHPUnit\Framework\TestCase;
 
 class ApiTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldPerformAnApiCallSuccessfully()
+
+    public function testShouldPerformAnApiCallSuccessfully()
     {
         $expects = [
             'status' => 200,

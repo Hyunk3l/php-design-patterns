@@ -20,10 +20,7 @@ class BmwCarFactoryTest extends TestCase
         $this->bmwCarFactory = new BmwCarFactory();
     }
 
-    /**
-     * @test
-     */
-    public function shouldCreateABmwSportCar()
+    public function testShouldCreateABmwSportCar()
     {
         $expected = $this->createCarDescription("Sport");
 
@@ -36,10 +33,8 @@ class BmwCarFactoryTest extends TestCase
         $this->assertEquals($expected, $sportCar);
     }
 
-    /**
-     * @test
-     */
-    public function shouldCreateABmwCityCar()
+
+    public function testShouldCreateABmwCityCar()
     {
         $expected = $this->createCarDescription("City");
 
@@ -52,10 +47,8 @@ class BmwCarFactoryTest extends TestCase
         $this->assertEquals($expected, $cityCar);
     }
 
-    /**
-     * @test
-     */
-    public function shouldCreateABmwFamilyCar()
+
+    public function testShouldCreateABmwFamilyCar()
     {
         $expected = $this->createCarDescription("Family");
 

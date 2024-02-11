@@ -10,19 +10,15 @@ use PHPUnit\Framework\TestCase;
 
 class DirectorTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldCreateASportWatch()
+
+    public function testShouldCreateASportWatch()
     {
         $sportWatch = (new Director())->build(new SportWatchBuilder());
 
         $this->assertEquals(new Hand(), $sportWatch->getWatchComponents()['Seconds hand']);
     }
-    /**
-     * @test
-     */
-    public function shouldCreateAClassicWatch()
+
+    public function testShouldCreateAClassicWatch()
     {
         $classicWatch = (new Director())->build(new ClassicWatchBuilder());
 

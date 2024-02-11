@@ -8,10 +8,8 @@ use PHPUnit\Framework\TestCase;
 
 class SportWatchBuilderTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldCreateASportWatch()
+
+    public function testShouldCreateASportWatch()
     {
         $watch = (new SportWatchBuilder())
             ->createWatch()

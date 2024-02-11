@@ -4,6 +4,7 @@ namespace Hyunk3l\Test\PhpDesignPatterns\Creational\AbstractFactory;
 
 use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\VolkswagenCarFactory;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class VolkswagenCarFactoryTest extends TestCase
 {
@@ -14,11 +15,8 @@ class VolkswagenCarFactoryTest extends TestCase
         $this->volkswagenCarFactory = new VolkswagenCarFactory();
     }
 
-    /**
-     * @test
-     * @dataProvider providerVolkswagenCars
-     */
-    public function shouldCreateVolkswagenCars(string $method, string $type)
+    #[DataProvider('providerVolkswagenCars')]
+    public function testShouldCreateVolkswagenCars(string $method, string $type)
     {
         $expected = "Volkswagen $type car!\nName:Golf GTI\nColor:candy white\nEngine:3.0 200cv";
 

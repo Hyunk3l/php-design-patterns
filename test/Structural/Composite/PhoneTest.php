@@ -9,10 +9,8 @@ use PHPUnit\Framework\TestCase;
 
 class PhoneTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldGetPhonePrice()
+
+    public function testShouldGetPhonePrice()
     {
         $phone = new Phone(
             [

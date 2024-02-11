@@ -10,10 +10,7 @@ class SwitchButtonCommandTest extends TestCase
 {
     private const COMMAND_MESSAGE = "Tv has been switched on.";
 
-    /**
-     * @test
-     */
-    public function shouldExecuteSwitchButtonCommand()
+    public function testShouldExecuteSwitchButtonCommand()
     {
         $receiver = $this->getMockBuilder(ReceiverInterface::class)
             ->onlyMethods(["executeCommand"])

@@ -4,6 +4,7 @@ namespace Hyunk3l\Test\PhpDesignPatterns\Creational\AbstractFactory;
 
 use Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory\MercedesCarFactory;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class MercedesCarFactoryTest extends TestCase
 {
@@ -18,23 +19,6 @@ class MercedesCarFactoryTest extends TestCase
     protected function setUp(): void
     {
         $this->mercedesCarFactory = new MercedesCarFactory();
-    }
-
-    /**
-     * @test
-     * @dataProvider providerCreateMercedesCars
-     */
-    public function shouldCreateMercedesCars(string $method, string $type)
-    {
-        $expected = "Mercedes $type car!\nName:A1 AMG\nColor:grey space\nEngine:3.0 300cv";
-
-        $sportCar = $this->mercedesCarFactory->$method(
-            self::GENERIC_CAR_NAME,
-            self::GENERIC_CAR_COLOR,
-            self::GENERIC_CAR_ENGINE_SPECS
-        );
-
-        $this->assertEquals($expected, $sportCar);
     }
 
     public static function providerCreateMercedesCars(): array
@@ -53,5 +37,19 @@ class MercedesCarFactoryTest extends TestCase
                 'type' => 'Family'
             ],
         ];
+    }
+
+    #[DataProvider('providerCreateMercedesCars')]
+    public function testShouldCreateMercedesCars(string $method, string $type)
+    {
+        $expected = "Mercedes $type car!\nName:A1 AMG\nColor:grey space\nEngine:3.0 300cv";
+
+        $sportCar = $this->mercedesCarFactory->$method(
+            self::GENERIC_CAR_NAME,
+            self::GENERIC_CAR_COLOR,
+            self::GENERIC_CAR_ENGINE_SPECS
+        );
+
+        $this->assertEquals($expected, $sportCar);
     }
 }

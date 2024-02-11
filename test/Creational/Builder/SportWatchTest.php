@@ -8,10 +8,8 @@ use PHPUnit\Framework\TestCase;
 
 class SportWatchTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldAddAComponentToASportWatch()
+
+    public function testShouldAddAComponentToASportWatch()
     {
         $watch = new SportWatch();
         $mock_component = $this->getMockBuilder(ComponentInterface::class)

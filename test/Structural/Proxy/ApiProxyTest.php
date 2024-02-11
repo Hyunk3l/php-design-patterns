@@ -7,10 +7,8 @@ use PHPUnit\Framework\TestCase;
 
 class ApiProxyTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldPerformAnApiCall()
+
+    public function testShouldPerformAnApiCall()
     {
         $expects = [
             'status'    => 200,

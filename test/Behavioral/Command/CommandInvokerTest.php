@@ -8,10 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class CommandInvokerTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function shouldRunAValidCommand()
+    public function testShouldRunAValidCommand()
     {
         $command = $this->getMockBuilder(CommandInterface::class)
             ->disableOriginalConstructor()
