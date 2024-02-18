@@ -25,9 +25,9 @@ class BmwCarFactoryTest extends TestCase
         $expected = $this->createCarDescription("Sport");
 
         $sportCar = $this->bmwCarFactory->createSportCar(
-            self::GENERIC_CAR_NAME,
-            self::GENERIC_CAR_COLOR,
-            self::GENERIC_CAR_ENGINE_SPECS
+            color: self::GENERIC_CAR_COLOR,
+            name: self::GENERIC_CAR_NAME,
+            engineSpecs: self::GENERIC_CAR_ENGINE_SPECS
         );
 
         $this->assertEquals($expected, $sportCar);
