@@ -4,7 +4,7 @@ namespace Hyunk3l\PhpDesignPatterns\Structural\Proxy;
 
 class Api
 {
-    public function doApiCall(string $url, array $data, string $method): array
+    public function doApiCall(string $url, array $data, string $method): array|null
     {
         return [
             'status'    => 200,
