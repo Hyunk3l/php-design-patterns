@@ -26,4 +26,10 @@ class SwitchButtonCommandTest extends TestCase
 
         $this->assertEquals(self::COMMAND_MESSAGE, $result);
     }
+
+    public function testShouldFailInCaseReceiverIsNotValid()
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $result = (new SwitchButtonCommand(control: false));
+    }
 }
