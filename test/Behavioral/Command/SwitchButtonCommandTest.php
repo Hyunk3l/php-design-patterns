@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class SwitchButtonCommandTest extends TestCase
 {
-    private const COMMAND_MESSAGE = "Tv has been switched on.";
+    private const string COMMAND_MESSAGE = "Tv has been switched on.";
 
     public function testShouldExecuteSwitchButtonCommand()
     {

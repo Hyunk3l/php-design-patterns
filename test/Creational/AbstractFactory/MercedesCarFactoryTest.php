@@ -8,11 +8,11 @@ use PHPUnit\Framework\Attributes\DataProvider;
 
 class MercedesCarFactoryTest extends TestCase
 {
-    private const GENERIC_CAR_NAME = "A1 AMG";
+    private const string GENERIC_CAR_NAME = "A1 AMG";
 
-    private const GENERIC_CAR_COLOR = "grey space";
+    private const string GENERIC_CAR_COLOR = "grey space";
 
-    private const GENERIC_CAR_ENGINE_SPECS = "3.0 300cv";
+    private const string GENERIC_CAR_ENGINE_SPECS = "3.0 300cv";
 
     private MercedesCarFactory $mercedesCarFactory;
 

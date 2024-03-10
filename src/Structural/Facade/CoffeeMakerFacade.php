@@ -4,7 +4,7 @@ namespace Hyunk3l\PhpDesignPatterns\Structural\Facade;
 
 class CoffeeMakerFacade
 {
-    private const MINIMUM_CUPS = 1;
+    private const int MINIMUM_CUPS = 1;
 
     private Dispenser $coffeeDispenser;
 
