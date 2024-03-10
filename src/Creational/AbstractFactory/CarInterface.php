@@ -9,6 +9,4 @@ interface CarInterface
     public function getColor(): string;
 
     public function getEngineSpecs(): string;
-
-    public function __toString(): string;
 }

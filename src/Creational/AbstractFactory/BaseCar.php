@@ -2,7 +2,7 @@
 
 namespace Hyunk3l\PhpDesignPatterns\Creational\AbstractFactory;
 
-abstract class BaseCar implements CarInterface
+abstract class BaseCar implements CarInterface, \Stringable
 {
     public function __construct(
         private string $name,
