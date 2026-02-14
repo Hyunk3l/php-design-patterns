@@ -10,15 +10,42 @@ if [[ ! -f "$CLOVER_FILE" ]]; then
   exit 1
 fi
 
-METRICS_LINE="$(grep -m1 '<metrics ' "$CLOVER_FILE" || true)"
+read -r COVERED STATEMENTS < <(
+  php -r '
+    $file = $argv[1];
+    $xml = @simplexml_load_file($file);
+    if ($xml === false) {
+      fwrite(STDERR, "Could not parse coverage XML: $file\n");
+      exit(1);
+    }
 
-if [[ -z "$METRICS_LINE" ]]; then
-  echo "Could not read metrics from $CLOVER_FILE"
-  exit 1
-fi
+    $metrics = $xml->xpath("//metrics[@statements and @coveredstatements]");
+    if ($metrics === false || count($metrics) === 0) {
+      fwrite(STDERR, "No coverage metrics found in $file\n");
+      exit(1);
+    }
 
-STATEMENTS="$(echo "$METRICS_LINE" | sed -n 's/.*statements="\([0-9]*\)".*/\1/p')"
-COVERED="$(echo "$METRICS_LINE" | sed -n 's/.*coveredstatements="\([0-9]*\)".*/\1/p')"
+    $covered = -1;
+    $statements = -1;
+
+    foreach ($metrics as $node) {
+      $nodeStatements = (int) $node["statements"];
+      $nodeCovered = (int) $node["coveredstatements"];
+
+      if ($nodeStatements > $statements) {
+        $statements = $nodeStatements;
+        $covered = $nodeCovered;
+      }
+    }
+
+    if ($statements <= 0) {
+      fwrite(STDERR, "Invalid coverage statement count in $file\n");
+      exit(1);
+    }
+
+    echo $covered . " " . $statements . PHP_EOL;
+  ' "$CLOVER_FILE"
+)
 
 if [[ -z "$STATEMENTS" || -z "$COVERED" || "$STATEMENTS" -eq 0 ]]; then
   echo "Invalid coverage metrics in $CLOVER_FILE"
