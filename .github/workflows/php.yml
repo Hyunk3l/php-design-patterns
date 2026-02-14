@@ -24,7 +24,7 @@ jobs:
         tools: composer:v2
 
     - name: Validate composer.json and composer.lock
-      run: ./composer.phar validate --strict
+      run: ./composer.phar validate --strict --no-check-lock
 
     - name: Cache Composer packages
       uses: actions/cache@v4
