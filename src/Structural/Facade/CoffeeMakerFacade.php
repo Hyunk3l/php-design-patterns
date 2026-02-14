@@ -24,9 +24,9 @@ class CoffeeMakerFacade
         $numberOfCupsToMake = $this->checkCupsToMake($numberOfCupsToMake);
 
         $coffeeCups = [];
-        for ($i=1; $i<$numberOfCupsToMake+1; $i++) {
+        for ($i = 1; $i < $numberOfCupsToMake + 1; $i++) {
             $products = implode(',', $this->getProducts());
-            $coffeeCups["coffee #".$i] = $products;
+            $coffeeCups["coffee #" . $i] = $products;
         }
         return $coffeeCups;
     }

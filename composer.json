@@ -9,7 +9,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=8.3"
+        "php": ">=8.4.1"
     },
     "autoload": {
         "psr-4": {
@@ -23,14 +23,23 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^13.0",
+        "phpstan/phpstan": "^2.1",
         "squizlabs/php_codesniffer": "^4.0"
     },
     "scripts": {
-        "test": "vendor/bin/phpunit test/",
+        "test": "vendor/bin/phpunit --no-coverage test/",
+        "test:coverage": "vendor/bin/phpunit --coverage-clover coverage/clover.xml test/",
         "cs": "vendor/bin/phpcs src test",
+        "cs:fix": "vendor/bin/phpcbf src test",
+        "stan": "vendor/bin/phpstan analyse --configuration=phpstan.neon --no-progress",
+        "structure:check": "bash scripts/check-pattern-structure.sh",
+        "coverage:check": "bash scripts/check-coverage.sh 70 coverage/clover.xml",
         "ci": [
-            "@test",
-            "@cs"
+            "@structure:check",
+            "@test:coverage",
+            "@coverage:check",
+            "@cs",
+            "@stan"
         ]
     }
 }
