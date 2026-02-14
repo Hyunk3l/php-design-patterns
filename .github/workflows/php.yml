@@ -38,4 +38,6 @@ jobs:
       run: ./composer.phar install --prefer-dist --no-progress
 
     - name: Run test suite
+      env:
+        XDEBUG_MODE: coverage
       run: ./composer.phar test
