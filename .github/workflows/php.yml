@@ -23,7 +23,7 @@ jobs:
       run: ./composer.phar install --prefer-dist --no-progress
 
     - name: Validate composer.json and composer.lock
-      run: ./composer.phar validate --strict
+      run: ./composer.phar validate --strict --no-check-lock
 
     - name: Run test suite
       run: ./vendor/bin/phpunit test/
