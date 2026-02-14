@@ -7,7 +7,6 @@ use PHPUnit\Framework\TestCase;
 
 class FlyweightFactoryTest extends TestCase
 {
-
     public function testShouldHaveEmptyFlyweightsPool()
     {
         $this->assertEquals(0, (new FlyweightFactory())->count());

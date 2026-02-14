@@ -8,7 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 class ClassicWatchTest extends TestCase
 {
-
     public function testShouldAddAComponentToAWatch()
     {
         $watch = new ClassicWatch();

@@ -10,7 +10,6 @@ use PHPUnit\Framework\TestCase;
 
 class DirectorTest extends TestCase
 {
-
     public function testShouldCreateASportWatch()
     {
         $sportWatch = (new Director())->build(new SportWatchBuilder());

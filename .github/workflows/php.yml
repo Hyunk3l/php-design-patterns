@@ -37,7 +37,19 @@ jobs:
     - name: Install dependencies
       run: ./composer.phar install --prefer-dist --no-progress
 
-    - name: Run test suite
+    - name: Check pattern structure
+      run: ./composer.phar structure:check
+
+    - name: Run test suite with coverage
       env:
         XDEBUG_MODE: coverage
-      run: ./composer.phar test
+      run: ./composer.phar test:coverage
+
+    - name: Check coverage threshold
+      run: ./composer.phar coverage:check
+
+    - name: Run coding standards
+      run: ./composer.phar cs
+
+    - name: Run static analysis
+      run: ./composer.phar stan

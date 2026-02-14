@@ -7,7 +7,6 @@ use PHPUnit\Framework\TestCase;
 
 class CoffeeMakerFacadeTest extends TestCase
 {
-
     public function testShouldMakeOneCoffeeIfNoNumberIsPassed()
     {
         $expected = [

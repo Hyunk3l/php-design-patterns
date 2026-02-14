@@ -8,7 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 class JsonResponseTest extends TestCase
 {
-
     public function testShouldBeAbleToConvertResponseToJsonString()
     {
         $expected = '{"message":"api response to json"}';

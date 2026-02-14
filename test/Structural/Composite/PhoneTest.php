@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 class PhoneTest extends TestCase
 {
-
     public function testShouldGetPhonePrice()
     {
         $phone = new Phone(

@@ -8,7 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 class XmlResponseTest extends TestCase
 {
-
     public function testShouldBeAbleToConvertResponseToXml()
     {
         $expected = <<<XML

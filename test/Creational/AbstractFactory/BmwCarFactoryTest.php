@@ -63,6 +63,9 @@ class BmwCarFactoryTest extends TestCase
 
     private function createCarDescription(string $type): string
     {
-        return "BMW $type car!" . PHP_EOL . "Name:" . (self::GENERIC_CAR_NAME) . "" . PHP_EOL . "Color:" . (self::GENERIC_CAR_COLOR) . "" . PHP_EOL . "Engine:" . (self::GENERIC_CAR_ENGINE_SPECS) . "";
+        return "BMW $type car!"
+            . PHP_EOL . "Name:" . self::GENERIC_CAR_NAME
+            . PHP_EOL . "Color:" . self::GENERIC_CAR_COLOR
+            . PHP_EOL . "Engine:" . self::GENERIC_CAR_ENGINE_SPECS;
     }
 }

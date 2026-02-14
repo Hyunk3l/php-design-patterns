@@ -8,7 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 class SportWatchBuilderTest extends TestCase
 {
-
     public function testShouldCreateASportWatch()
     {
         $watch = (new SportWatchBuilder())
