@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Hyunk3l\Test\PhpDesignPatterns\Behavioral\Command;
 
 use Hyunk3l\PhpDesignPatterns\Behavioral\Command\CommandInterface;
@@ -8,6 +10,13 @@ use PHPUnit\Framework\TestCase;
 
 class CommandInvokerTest extends TestCase
 {
+    public function testShouldFailWhenRunningWithoutACommand(): void
+    {
+        $this->expectException(\LogicException::class);
+
+        (new CommandInvoker())->run();
+    }
+
     public function testShouldRunAValidCommand()
     {
         $command = $this->getMockBuilder(CommandInterface::class)

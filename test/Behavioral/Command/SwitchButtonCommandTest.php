@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Hyunk3l\Test\PhpDesignPatterns\Behavioral\Command;
 
 use Hyunk3l\PhpDesignPatterns\Behavioral\Command\ReceiverInterface;
@@ -29,7 +31,8 @@ class SwitchButtonCommandTest extends TestCase
 
     public function testShouldFailInCaseReceiverIsNotValid()
     {
-        $this->expectException(\InvalidArgumentException::class);
-        $result = (new SwitchButtonCommand(control: false));
+        $this->expectException(\TypeError::class);
+
+        (new SwitchButtonCommand(control: false));
     }
 }

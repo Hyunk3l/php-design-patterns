@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Hyunk3l\PhpDesignPatterns\Structural\Facade;
 
 class CoffeeMakerFacade
@@ -22,19 +24,20 @@ class CoffeeMakerFacade
     public function makeCups(int $numberOfCupsToMake): array
     {
         $numberOfCupsToMake = $this->checkCupsToMake($numberOfCupsToMake);
+        $products = implode(',', $this->getProducts());
 
         $coffeeCups = [];
-        for ($i = 1; $i < $numberOfCupsToMake + 1; $i++) {
-            $products = implode(',', $this->getProducts());
-            $coffeeCups["coffee #" . $i] = $products;
+        for ($i = 1; $i <= $numberOfCupsToMake; $i++) {
+            $coffeeCups["coffee #$i"] = $products;
         }
+
         return $coffeeCups;
     }
 
     private function checkCupsToMake(int $numberOfCupsToMake): int
     {
-        if (static::MINIMUM_CUPS > $numberOfCupsToMake) {
-            $numberOfCupsToMake = static::MINIMUM_CUPS;
+        if (self::MINIMUM_CUPS > $numberOfCupsToMake) {
+            $numberOfCupsToMake = self::MINIMUM_CUPS;
         }
         return $numberOfCupsToMake;
     }

@@ -22,7 +22,7 @@ jobs:
         tools: composer:v2
 
     - name: Validate composer.json and composer.lock
-      run: ./composer.phar validate --strict --no-check-lock
+      run: composer validate --strict --no-check-lock
 
     - name: Cache Composer packages
       uses: actions/cache@v5
@@ -33,21 +33,21 @@ jobs:
           ${{ runner.os }}-php-${{ matrix.php-version }}-
 
     - name: Install dependencies
-      run: ./composer.phar install --prefer-dist --no-progress
+      run: composer install --prefer-dist --no-progress
 
     - name: Check pattern structure
-      run: ./composer.phar structure:check
+      run: composer structure:check
 
     - name: Run test suite with coverage
       env:
         XDEBUG_MODE: coverage
-      run: ./composer.phar test:coverage
+      run: composer test:coverage
 
     - name: Check coverage threshold
-      run: ./composer.phar coverage:check
+      run: composer coverage:check
 
     - name: Run coding standards
-      run: ./composer.phar cs
+      run: composer cs
 
     - name: Run static analysis
-      run: ./composer.phar stan
+      run: composer stan

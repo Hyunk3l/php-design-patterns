@@ -1,16 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Hyunk3l\PhpDesignPatterns\Behavioral\Command;
 
 class SwitchButtonCommand implements CommandInterface
 {
     private const string COMMAND_MESSAGE = "Tv has been switched on.";
 
-    public function __construct(private ReceiverInterface|false $control)
+    public function __construct(private ReceiverInterface $control)
     {
-        if ($control === false) {
-            throw new \InvalidArgumentException("ReceiverInterface must be valid");
-        }
     }
 
     public function execute(): string
