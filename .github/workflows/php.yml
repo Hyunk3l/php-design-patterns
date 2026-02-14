@@ -20,7 +20,7 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-version }}
-        coverage: none
+        coverage: xdebug
         tools: composer:v2
 
     - name: Validate composer.json and composer.lock
@@ -38,4 +38,6 @@ jobs:
       run: ./composer.phar install --prefer-dist --no-progress
 
     - name: Run test suite
+      env:
+        XDEBUG_MODE: coverage
       run: ./composer.phar test
