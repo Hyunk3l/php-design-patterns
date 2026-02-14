@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Hyunk3l\PhpDesignPatterns\Behavioral\Command;
 
 class CommandInvoker

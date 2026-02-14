@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Hyunk3l\Test\PhpDesignPatterns\Behavioral\Command;
 
 use Hyunk3l\PhpDesignPatterns\Behavioral\Command\ReceiverInterface;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Hyunk3l\Test\PhpDesignPatterns\Structural\Flyweight;
 
 use Hyunk3l\PhpDesignPatterns\Structural\Flyweight\FlyweightFactory;
